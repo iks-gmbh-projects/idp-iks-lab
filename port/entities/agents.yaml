@@ -1,0 +1,56 @@
+- identifier: port-catalog-maintainer
+  title: Port Catalog Maintainer
+  blueprint: agent
+  properties:
+    name: Port Catalog Maintainer
+    purpose: Helps maintain Port blueprints, entities, scorecards, and actions in this repository.
+    status: experimental
+    allowedActions:
+      - inspect-port-yaml
+      - propose-catalog-edits
+      - run-local-validation
+    dataSources:
+      - GitHub repository files
+      - Port catalog YAML
+      - IDP IKS documentation
+    humanApprovalRequired: true
+  relations:
+    owner: platform-team
+
+- identifier: iks-metadata-reviewer
+  title: IKS Metadata Reviewer
+  blueprint: agent
+  properties:
+    name: IKS Metadata Reviewer
+    purpose: Reviews service catalog metadata for IKS readiness and proposes follow-up tasks.
+    status: proposed
+    allowedActions:
+      - inspect-service-metadata
+      - propose-metadata-fixes
+      - draft-review-summary
+    dataSources:
+      - Service catalog entities
+      - Service-local catalog files
+      - IKS metadata model
+    humanApprovalRequired: true
+  relations:
+    owner: platform-team
+
+- identifier: idp-lab-change-planner
+  title: IDP Lab Change Planner
+  blueprint: agent
+  properties:
+    name: IDP Lab Change Planner
+    purpose: Plans focused changes for the IDP IKS lab while preserving the MVP boundary.
+    status: proposed
+    allowedActions:
+      - inspect-repository-docs
+      - draft-change-plan
+      - recommend-validation
+    dataSources:
+      - Repository documentation
+      - ADRs
+      - Port configuration
+    humanApprovalRequired: true
+  relations:
+    owner: platform-team

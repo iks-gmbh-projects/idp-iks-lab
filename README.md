@@ -34,6 +34,7 @@ Dieses Repository ist der Startpunkt fuer ein experimentelles Internal Developer
 - `port/actions/`: Vorbereitete Self-Service-Workflows.
 - `examples/services/`: Beispiel-Services mit Doku und Katalogdaten.
 - `decisions/`: Architekturentscheidungen.
+- `agents/`: Agentenleitfaden, wiederverwendbare Prompts, Checklisten und Codex-Skills.
 
 ## Naechste Schritte
 

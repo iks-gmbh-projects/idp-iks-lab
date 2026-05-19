@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDP Lab Change Planner"
+  short_description: "Plan IDP lab repo changes"
+  default_prompt: "Use $idp-lab-change-planner to plan a focused change in the IDP IKS lab repository."

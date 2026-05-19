@@ -1,0 +1,4 @@
+interface:
+  display_name: "Port Catalog Maintainer"
+  short_description: "Maintain Port catalog artifacts"
+  default_prompt: "Use $port-catalog-maintainer to review or update Port catalog configuration."

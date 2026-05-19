@@ -1,0 +1,4 @@
+interface:
+  display_name: "IKS Metadata Reviewer"
+  short_description: "Review IKS service metadata"
+  default_prompt: "Use $iks-metadata-reviewer to review service catalog metadata for IKS readiness."
