@@ -1,0 +1,31 @@
+# Default all text files to LF and UTF-8 in the working tree.
+* text=auto eol=lf working-tree-encoding=UTF-8
+
+# Explicit text formats used by this repository.
+*.md text eol=lf working-tree-encoding=UTF-8
+*.yaml text eol=lf working-tree-encoding=UTF-8
+*.yml text eol=lf working-tree-encoding=UTF-8
+*.json text eol=lf working-tree-encoding=UTF-8
+*.txt text eol=lf working-tree-encoding=UTF-8
+*.sh text eol=lf working-tree-encoding=UTF-8
+*.ps1 text eol=lf working-tree-encoding=UTF-8
+*.toml text eol=lf working-tree-encoding=UTF-8
+*.properties text eol=lf working-tree-encoding=UTF-8
+*.gitignore text eol=lf working-tree-encoding=UTF-8
+.gitignore text eol=lf working-tree-encoding=UTF-8
+
+# Common binary formats should never be normalized as text.
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.gif -text
+*.webp -text
+*.ico -text
+*.pdf -text
+*.zip -text
+*.gz -text
+*.tar -text
+*.jar -text
+*.class -text
+*.exe -text
+*.dll -text

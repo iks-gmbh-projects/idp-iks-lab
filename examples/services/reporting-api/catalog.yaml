@@ -1,4 +1,4 @@
-﻿identifier: reporting-api
+identifier: reporting-api
 blueprint: service
 properties:
   name: Reporting API

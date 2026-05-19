@@ -1,4 +1,4 @@
-﻿# Catalog Metadata Fix
+# Catalog Metadata Fix
 
 ## Service
 

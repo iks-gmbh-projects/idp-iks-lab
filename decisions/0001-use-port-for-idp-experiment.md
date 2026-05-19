@@ -1,4 +1,4 @@
-﻿# ADR 0001: Port fuer das IDP-Experiment verwenden
+# ADR 0001: Port fuer das IDP-Experiment verwenden
 
 ## Status
 

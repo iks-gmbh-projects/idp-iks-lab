@@ -1,4 +1,4 @@
-﻿# Customer Portal Documentation
+# Customer Portal Documentation
 
 ## Zweck
 

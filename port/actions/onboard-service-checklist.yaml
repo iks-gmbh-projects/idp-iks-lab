@@ -1,4 +1,4 @@
-﻿identifier: onboard-service-checklist
+identifier: onboard-service-checklist
 title: Create service onboarding checklist
 blueprint: service
 description: Creates a checklist for completing catalog, documentation and IKS metadata.

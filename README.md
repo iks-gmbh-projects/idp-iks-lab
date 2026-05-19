@@ -1,4 +1,4 @@
-﻿# IDP IKS Lab
+# IDP IKS Lab
 
 Dieses Repository ist der Startpunkt fuer ein experimentelles Internal Developer Platform MVP fuer die IKS. Der Fokus liegt auf einem Port-basierten Service-Katalog, der Ownership, Dokumentation, IKS-Metadaten, Scorecards und einfache Workflows sichtbar macht.
 

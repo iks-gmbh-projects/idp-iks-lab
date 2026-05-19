@@ -1,4 +1,4 @@
-﻿# Reporting API Documentation
+# Reporting API Documentation
 
 ## Zweck
 

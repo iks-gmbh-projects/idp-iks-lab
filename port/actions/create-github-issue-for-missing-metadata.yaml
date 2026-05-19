@@ -1,4 +1,4 @@
-﻿identifier: create-github-issue-for-missing-metadata
+identifier: create-github-issue-for-missing-metadata
 title: Create GitHub issue for missing metadata
 blueprint: service
 description: Creates a GitHub issue to track missing catalog or IKS metadata.

@@ -1,4 +1,4 @@
-﻿# IKS-Metadatenmodell
+# IKS-Metadatenmodell
 
 Dieses Dokument beschreibt die ersten Pflichtfelder fuer Services im Katalog. Die Felder sind bewusst klein gehalten, damit Teams schnell onboarden koennen.
 

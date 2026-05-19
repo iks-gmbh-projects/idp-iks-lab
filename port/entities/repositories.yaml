@@ -1,4 +1,4 @@
-﻿- identifier: customer-portal-repo
+- identifier: customer-portal-repo
   title: customer-portal
   blueprint: repository
   properties:

@@ -1,4 +1,4 @@
-﻿# Vision: IDP fuer IKS
+# Vision: IDP fuer IKS
 
 Die IDP soll fuer IKS-relevante Software eine verlaessliche Sicht auf Services, Verantwortung, Dokumentation und Kontrollstatus schaffen. Sie beginnt als Service-Katalog und entwickelt sich spaeter zu einem System of Action fuer Workflows, Reviews, Governance und Agenten.
 

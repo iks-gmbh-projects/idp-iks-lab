@@ -1,4 +1,4 @@
-﻿identifier: request-iks-review
+identifier: request-iks-review
 title: Request IKS review
 blueprint: service
 description: Starts a manual IKS review request for a service.

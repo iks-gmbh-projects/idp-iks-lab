@@ -1,4 +1,4 @@
-﻿name: Validate Port configuration
+name: Validate Port configuration
 
 on:
   pull_request:

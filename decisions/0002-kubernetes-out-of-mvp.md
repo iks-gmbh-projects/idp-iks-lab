@@ -1,4 +1,4 @@
-﻿# ADR 0002: Kubernetes aus dem MVP ausklammern
+# ADR 0002: Kubernetes aus dem MVP ausklammern
 
 ## Status
 
