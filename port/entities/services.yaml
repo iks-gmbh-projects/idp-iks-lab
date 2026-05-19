@@ -1,0 +1,40 @@
+﻿- identifier: customer-portal
+  title: Customer Portal
+  blueprint: service
+  properties:
+    name: Customer Portal
+    description: Demo service for a customer-facing web portal.
+    lifecycle: experimental
+    businessOwner: customer-success
+    criticality: high
+    protectionNeed: high
+    dataClass: personal-data
+    documentation: https://github.com/example-org/customer-portal/tree/main/docs
+    runbook: https://github.com/example-org/customer-portal/blob/main/docs/runbook.md
+    complianceScope:
+      - iks
+      - gdpr
+  relations:
+    owner: platform-team
+    system: customer-experience
+    repository: customer-portal-repo
+
+- identifier: reporting-api
+  title: Reporting API
+  blueprint: service
+  properties:
+    name: Reporting API
+    description: Demo service for management reporting data access.
+    lifecycle: experimental
+    businessOwner: customer-success
+    criticality: medium
+    protectionNeed: normal
+    dataClass: confidential
+    documentation: https://github.com/example-org/reporting-api/tree/main/docs
+    runbook: ''
+    complianceScope:
+      - iks
+  relations:
+    owner: platform-team
+    system: management-reporting
+    repository: reporting-api-repo

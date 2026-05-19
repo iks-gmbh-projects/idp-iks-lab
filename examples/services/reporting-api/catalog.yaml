@@ -1,0 +1,18 @@
+﻿identifier: reporting-api
+blueprint: service
+properties:
+  name: Reporting API
+  description: Demo service for management reporting data access.
+  lifecycle: experimental
+  businessOwner: customer-success
+  criticality: medium
+  protectionNeed: normal
+  dataClass: confidential
+  documentation: ./docs/index.md
+  runbook: ''
+  complianceScope:
+    - iks
+relations:
+  owner: platform-team
+  system: management-reporting
+  repository: reporting-api-repo

@@ -1,0 +1,81 @@
+﻿identifier: service
+title: Service
+icon: Service
+schema:
+  properties:
+    name:
+      type: string
+      title: Name
+    description:
+      type: string
+      title: Description
+    lifecycle:
+      type: string
+      title: Lifecycle
+      enum:
+        - experimental
+        - production
+        - deprecated
+    businessOwner:
+      type: string
+      title: Business Owner
+    criticality:
+      type: string
+      title: Criticality
+      enum:
+        - low
+        - medium
+        - high
+        - critical
+    protectionNeed:
+      type: string
+      title: Protection Need
+      enum:
+        - normal
+        - high
+        - very-high
+    dataClass:
+      type: string
+      title: Data Class
+      enum:
+        - public
+        - internal
+        - confidential
+        - personal-data
+    documentation:
+      type: string
+      title: Documentation
+      format: url
+    runbook:
+      type: string
+      title: Runbook
+      format: url
+    complianceScope:
+      type: array
+      title: Compliance Scope
+      items:
+        type: string
+  required:
+    - name
+    - lifecycle
+    - businessOwner
+    - criticality
+    - protectionNeed
+    - dataClass
+    - documentation
+relations:
+  owner:
+    target: team
+    title: Technical Owner
+    required: true
+    many: false
+  system:
+    target: system
+    title: System
+    required: true
+    many: false
+  repository:
+    target: repository
+    title: Repository
+    required: true
+    many: false

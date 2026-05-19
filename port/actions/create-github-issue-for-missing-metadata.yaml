@@ -1,0 +1,20 @@
+﻿identifier: create-github-issue-for-missing-metadata
+title: Create GitHub issue for missing metadata
+blueprint: service
+description: Creates a GitHub issue to track missing catalog or IKS metadata.
+trigger:
+  type: self-service
+  operation: DAY-2
+inputs:
+  - identifier: missingField
+    title: Missing field
+    type: string
+    required: true
+  - identifier: details
+    title: Details
+    type: string
+    required: false
+invocation:
+  type: github-workflow
+  workflow: validate-port-config.yml
+  note: Replace this skeleton with the Port GitHub workflow invocation once the GitHub integration is connected.

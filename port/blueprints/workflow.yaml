@@ -1,0 +1,38 @@
+﻿identifier: workflow
+title: Workflow
+icon: Workflow
+schema:
+  properties:
+    name:
+      type: string
+      title: Name
+    description:
+      type: string
+      title: Description
+    status:
+      type: string
+      title: Status
+      enum:
+        - draft
+        - active
+        - retired
+    riskLevel:
+      type: string
+      title: Risk Level
+      enum:
+        - low
+        - medium
+        - high
+    auditRequired:
+      type: boolean
+      title: Audit Required
+  required:
+    - name
+    - status
+    - riskLevel
+relations:
+  owner:
+    target: team
+    title: Owner
+    required: true
+    many: false

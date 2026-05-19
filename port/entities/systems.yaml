@@ -1,0 +1,21 @@
+﻿- identifier: customer-experience
+  title: Customer Experience
+  blueprint: system
+  properties:
+    name: Customer Experience
+    domain: Customer
+    description: Services for customer-facing journeys.
+    criticality: high
+  relations:
+    owner: platform-team
+
+- identifier: management-reporting
+  title: Management Reporting
+  blueprint: system
+  properties:
+    name: Management Reporting
+    domain: Finance
+    description: Reporting and analytics services for management views.
+    criticality: medium
+  relations:
+    owner: platform-team

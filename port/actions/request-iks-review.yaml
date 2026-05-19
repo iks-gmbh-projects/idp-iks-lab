@@ -1,0 +1,21 @@
+﻿identifier: request-iks-review
+title: Request IKS review
+blueprint: service
+description: Starts a manual IKS review request for a service.
+trigger:
+  type: self-service
+  operation: DAY-2
+inputs:
+  - identifier: reason
+    title: Review reason
+    type: string
+    required: true
+  - identifier: requestedDueDate
+    title: Requested due date
+    type: string
+    format: date
+    required: false
+invocation:
+  type: github-issue
+  issueTemplate: iks-review.md
+  note: Initial low-risk implementation should create a GitHub issue for the review board.

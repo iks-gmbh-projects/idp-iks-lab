@@ -1,0 +1,43 @@
+﻿identifier: agent
+title: Agent
+icon: Robot
+schema:
+  properties:
+    name:
+      type: string
+      title: Name
+    purpose:
+      type: string
+      title: Purpose
+    status:
+      type: string
+      title: Status
+      enum:
+        - proposed
+        - experimental
+        - active
+        - retired
+    allowedActions:
+      type: array
+      title: Allowed Actions
+      items:
+        type: string
+    dataSources:
+      type: array
+      title: Data Sources
+      items:
+        type: string
+    humanApprovalRequired:
+      type: boolean
+      title: Human Approval Required
+  required:
+    - name
+    - purpose
+    - status
+    - humanApprovalRequired
+relations:
+  owner:
+    target: team
+    title: Owner
+    required: true
+    many: false

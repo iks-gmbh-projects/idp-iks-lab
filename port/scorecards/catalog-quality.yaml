@@ -1,0 +1,20 @@
+﻿identifier: catalog-quality
+title: Catalog Quality
+blueprint: service
+rules:
+  - identifier: has-technical-owner
+    title: Technical owner is assigned
+    query: $.relations.owner != null
+    level: bronze
+  - identifier: has-repository
+    title: Repository is linked
+    query: $.relations.repository != null
+    level: bronze
+  - identifier: has-documentation
+    title: Documentation link is present
+    query: $.properties.documentation != null && $.properties.documentation != ""
+    level: silver
+  - identifier: has-runbook
+    title: Runbook link is present
+    query: $.properties.runbook != null && $.properties.runbook != ""
+    level: gold

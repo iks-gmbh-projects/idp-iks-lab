@@ -1,0 +1,31 @@
+﻿identifier: repository
+title: Repository
+icon: Github
+schema:
+  properties:
+    name:
+      type: string
+      title: Name
+    url:
+      type: string
+      title: URL
+      format: url
+    defaultBranch:
+      type: string
+      title: Default Branch
+    visibility:
+      type: string
+      title: Visibility
+      enum:
+        - private
+        - internal
+        - public
+  required:
+    - name
+    - url
+relations:
+  owner:
+    target: team
+    title: Owner
+    required: true
+    many: false

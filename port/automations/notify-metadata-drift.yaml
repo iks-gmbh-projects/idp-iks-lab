@@ -1,0 +1,12 @@
+﻿identifier: notify-metadata-drift
+title: Notify metadata drift
+description: Placeholder automation for notifying owners when required metadata becomes incomplete.
+status: draft
+trigger:
+  type: scorecard-change
+  scorecards:
+    - catalog-quality
+    - iks-baseline
+action:
+  type: notify-owner
+  channel: github-issue

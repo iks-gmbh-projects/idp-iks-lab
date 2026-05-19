@@ -1,0 +1,23 @@
+﻿- identifier: platform-team
+  title: Platform Team
+  blueprint: team
+  properties:
+    name: Platform Team
+    email: platform@example.com
+    area: Platform Engineering
+
+- identifier: iks-review-board
+  title: IKS Review Board
+  blueprint: team
+  properties:
+    name: IKS Review Board
+    email: iks-review@example.com
+    area: Governance
+
+- identifier: customer-success
+  title: Customer Success
+  blueprint: team
+  properties:
+    name: Customer Success
+    email: customer-success@example.com
+    area: Business

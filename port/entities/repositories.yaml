@@ -1,0 +1,21 @@
+﻿- identifier: customer-portal-repo
+  title: customer-portal
+  blueprint: repository
+  properties:
+    name: customer-portal
+    url: https://github.com/example-org/customer-portal
+    defaultBranch: main
+    visibility: internal
+  relations:
+    owner: platform-team
+
+- identifier: reporting-api-repo
+  title: reporting-api
+  blueprint: repository
+  properties:
+    name: reporting-api
+    url: https://github.com/example-org/reporting-api
+    defaultBranch: main
+    visibility: internal
+  relations:
+    owner: platform-team

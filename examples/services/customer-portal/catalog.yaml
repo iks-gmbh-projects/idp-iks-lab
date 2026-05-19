@@ -1,0 +1,19 @@
+﻿identifier: customer-portal
+blueprint: service
+properties:
+  name: Customer Portal
+  description: Demo service for a customer-facing web portal.
+  lifecycle: experimental
+  businessOwner: customer-success
+  criticality: high
+  protectionNeed: high
+  dataClass: personal-data
+  documentation: ./docs/index.md
+  runbook: ./docs/runbook.md
+  complianceScope:
+    - iks
+    - gdpr
+relations:
+  owner: platform-team
+  system: customer-experience
+  repository: customer-portal-repo

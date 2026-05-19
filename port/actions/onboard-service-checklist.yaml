@@ -1,0 +1,19 @@
+﻿identifier: onboard-service-checklist
+title: Create service onboarding checklist
+blueprint: service
+description: Creates a checklist for completing catalog, documentation and IKS metadata.
+trigger:
+  type: self-service
+  operation: DAY-2
+inputs:
+  - identifier: targetLifecycle
+    title: Target lifecycle
+    type: string
+    enum:
+      - experimental
+      - production
+    required: true
+invocation:
+  type: github-issue
+  issueTemplate: catalog-metadata-fix.md
+  note: Keep this workflow advisory until the catalog model is validated.

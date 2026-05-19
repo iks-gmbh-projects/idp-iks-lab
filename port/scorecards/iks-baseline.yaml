@@ -1,0 +1,24 @@
+﻿identifier: iks-baseline
+title: IKS Baseline
+blueprint: service
+rules:
+  - identifier: has-business-owner
+    title: Business owner is assigned
+    query: $.properties.businessOwner != null && $.properties.businessOwner != ""
+    level: bronze
+  - identifier: has-criticality
+    title: Criticality is classified
+    query: $.properties.criticality != null && $.properties.criticality != ""
+    level: bronze
+  - identifier: has-protection-need
+    title: Protection need is classified
+    query: $.properties.protectionNeed != null && $.properties.protectionNeed != ""
+    level: silver
+  - identifier: has-data-class
+    title: Data class is classified
+    query: $.properties.dataClass != null && $.properties.dataClass != ""
+    level: silver
+  - identifier: has-iks-scope
+    title: IKS scope is declared
+    query: $.properties.complianceScope contains "iks"
+    level: gold

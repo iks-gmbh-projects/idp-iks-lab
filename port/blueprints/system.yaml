@@ -1,0 +1,31 @@
+﻿identifier: system
+title: System
+icon: Microservice
+schema:
+  properties:
+    name:
+      type: string
+      title: Name
+    domain:
+      type: string
+      title: Domain
+    description:
+      type: string
+      title: Description
+    criticality:
+      type: string
+      title: Criticality
+      enum:
+        - low
+        - medium
+        - high
+        - critical
+  required:
+    - name
+    - domain
+relations:
+  owner:
+    target: team
+    title: Owner
+    required: true
+    many: false
