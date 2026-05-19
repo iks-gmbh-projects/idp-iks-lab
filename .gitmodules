@@ -1,0 +1,5 @@
+[submodule "wiki"]
+	path = wiki
+	url = https://github.com/iks-gmbh-projects/idp-iks-lab.wiki.git
+	branch = master
+	update = merge

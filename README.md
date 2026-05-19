@@ -27,14 +27,37 @@ Dieses Repository ist der Startpunkt fuer ein experimentelles Internal Developer
 
 ## Struktur
 
-- `docs/`: Zielbild, Demo-Story, Betriebsmodell und IKS-Metadatenmodell.
+- `wiki/docs/`: Zielbild, Demo-Story, Betriebsmodell und IKS-Metadatenmodell als GitHub-Wiki-Submodul.
 - `port/blueprints/`: Port-Datenmodell fuer Katalogobjekte.
 - `port/entities/`: Beispielhafte Katalogdaten.
 - `port/scorecards/`: Erste Qualitaets- und IKS-Pruefregeln.
 - `port/actions/`: Vorbereitete Self-Service-Workflows.
 - `examples/services/`: Beispiel-Services mit Doku und Katalogdaten.
-- `decisions/`: Architekturentscheidungen.
+- `wiki/decisions/`: Architekturentscheidungen als Teil des GitHub-Wiki-Submoduls.
 - `agents/`: Agentenleitfaden, wiederverwendbare Prompts, Checklisten und Codex-Skills.
+
+## Wiki-Submodul
+
+Die zentrale Projektdokumentation liegt im GitHub-Wiki unter `wiki/`. Beim Klonen sollte das Submodul mitgeladen werden:
+
+```powershell
+git clone --recurse-submodules https://github.com/iks-gmbh-projects/idp-iks-lab.git
+```
+
+Bei einem bestehenden Clone:
+
+```powershell
+git submodule update --init --remote --merge wiki
+```
+
+Vor Wiki-Aenderungen:
+
+```powershell
+git -C wiki switch master
+git -C wiki pull --ff-only
+```
+
+Wiki-Aenderungen brauchen zwei Commits: zuerst im `wiki`-Submodul committen und pushen, danach den aktualisierten Submodul-Zeiger im Hauptrepository committen.
 
 ## Naechste Schritte
 

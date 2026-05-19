@@ -29,6 +29,13 @@ Check that:
 
 ## Documentation Consistency
 
-- Schema changes should be reflected in `docs/iks-metadata-model.md` when they affect service metadata.
-- Governance or scope decisions should be captured in `decisions/` when they change the MVP boundary.
-- Demo flow changes should be reflected in `docs/demo-story.md`.
+- Schema changes should be reflected in `wiki/docs/iks-metadata-model.md` when they affect service metadata.
+- Governance or scope decisions should be captured in `wiki/decisions/` when they change the MVP boundary.
+- Demo flow changes should be reflected in `wiki/docs/demo-story.md`.
+
+## Wiki Submodule
+
+- Initialize docs with `git submodule update --init --remote --merge wiki`.
+- Before editing wiki docs, run `git -C wiki switch master` and `git -C wiki pull --ff-only`.
+- Commit and push wiki changes inside `wiki`, then commit the updated `wiki` submodule pointer in the main repository.
+- Remaining risks: GitHub UI edits can advance the wiki independently, stale submodule pointers can hide new wiki content, and CI or agents must initialize submodules explicitly.

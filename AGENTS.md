@@ -13,12 +13,12 @@ This repository is an experimental Internal Developer Platform MVP for IKS. Trea
 - Prefer small, reviewable changes that fit the existing structure and language of the touched files.
 - Keep new agent-facing mechanics in English. Keep established German domain docs and IKS/Port terms intact unless the task asks for translation.
 - Update docs, Port artifacts, and examples together when a behavior or schema changes.
-- Use ADRs in `decisions/` for meaningful architectural or governance choices. Do not create an ADR for routine catalog edits.
+- Use ADRs in `wiki/decisions/` for meaningful architectural or governance choices. Do not create an ADR for routine catalog edits.
 - Keep generated or external workflow side effects out of scope unless a human explicitly approves them.
 
 ## Safe Edit Boundaries
 
-- Safe by default: `docs/`, `decisions/`, `examples/`, `port/`, `agents/`, and root guidance files.
+- Safe by default: `wiki/docs/`, `wiki/decisions/`, `examples/`, `port/`, `agents/`, and root guidance files.
 - Be careful with Port identifiers and relations. Existing identifiers are treated as stable API for demo imports and scorecards.
 - Do not remove required metadata from example services unless the task is specifically about demonstrating missing data.
 - Do not add Kubernetes, runtime health, deployment status, or infrastructure provisioning to the MVP path without a new decision record.
@@ -36,6 +36,8 @@ Use the lightest checks that prove the touched surface:
 - Manual consistency pass:
   verify that new required fields are documented, represented in blueprints, populated in demo entities, and covered by scorecards when relevant.
 
+Wiki docs live in the `wiki` submodule. Before editing them, run `git -C wiki switch master` and `git -C wiki pull --ff-only`. Commit and push wiki changes inside `wiki`, then commit the updated submodule pointer in the main repository.
+
 If a validator is unavailable locally, state that clearly and perform a targeted read-through of the affected YAML and Markdown.
 
 ## Change Summaries
@@ -50,4 +52,4 @@ For review comments, lead with concrete risks and file references. For implement
 
 ## Developer-Fast Agent Contract
 
-Agents may inspect, plan, edit repo files, and run local validation. Agents must ask before triggering external systems, opening real GitHub issues, changing Port workspaces, pushing branches, or altering anything outside the repository except explicitly requested local Codex skill installation.
+Agents may inspect, plan, edit repo files, and run local validation. Agents must ask before triggering external systems, opening real GitHub issues, changing Port workspaces, pushing branches, editing the GitHub wiki through the web UI, or altering anything outside the repository except explicitly requested local Codex skill installation.

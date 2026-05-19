@@ -7,7 +7,7 @@ description: Maintain and review Port catalog artifacts in the IDP IKS lab repos
 
 ## Workflow
 
-1. Read `AGENTS.md` and the relevant files under `port/`, `examples/services/`, and `docs/`.
+1. Read `AGENTS.md` and the relevant files under `port/`, `examples/services/`, and `wiki/docs/`.
 2. Identify the catalog surface: blueprint, entity, scorecard, action, automation, or service-local catalog file.
 3. Preserve stable identifiers, relation names, and enum values unless the user explicitly asks for a migration.
 4. When changing schema or required fields, update demo entities and affected docs in the same change.
