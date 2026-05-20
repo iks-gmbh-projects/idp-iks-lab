@@ -30,7 +30,7 @@ Use the lightest checks that prove the touched surface:
 - YAML syntax for Port and examples:
   `yamllint port examples agents`
 - GitHub Actions parity:
-  `.github` is not used in this repo; workflow templates live under `github/workflows/`.
+  The active validation workflow lives under `.github/workflows/`. Template/reference workflow files may also exist under `github/workflows/`; keep them in sync when changing validation behavior.
 - Codex skill validation:
   `C:\Users\wla_dev\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe C:\Users\wla_dev\.codex\skills\.system\skill-creator\scripts\quick_validate.py agents\skills\<skill-name>`
 - Manual consistency pass:
