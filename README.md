@@ -107,6 +107,12 @@ Lokal kann bei installiertem `yamllint` analog geprueft werden:
 yamllint port examples agents
 ```
 
+## Validierung
+
+Die aktive GitHub-Actions-Validierung liegt unter `.github/workflows/validate-port-config.yml` und prueft YAML-Dateien in `port`, `examples` und `agents`.
+
+Die Datei `github/workflows/validate-port-config.yml` bleibt als Vorlage und Referenz fuer die Workflow-Konfiguration erhalten.
+
 ## Wiki-Submodul
 
 Die zentrale Projektdokumentation liegt im GitHub-Wiki unter `wiki/`. Beim Klonen sollte das Submodul mitgeladen werden:
