@@ -36,6 +36,12 @@ Dieses Repository ist der Startpunkt fuer ein experimentelles Internal Developer
 - `wiki/decisions/`: Architekturentscheidungen als Teil des GitHub-Wiki-Submoduls.
 - `agents/`: Agentenleitfaden, wiederverwendbare Prompts, Checklisten und Codex-Skills.
 
+## Validierung
+
+Die aktive GitHub-Actions-Validierung liegt unter `.github/workflows/validate-port-config.yml` und prueft YAML-Dateien in `port`, `examples` und `agents`.
+
+Die Datei `github/workflows/validate-port-config.yml` bleibt als Vorlage und Referenz fuer die Workflow-Konfiguration erhalten.
+
 ## Wiki-Submodul
 
 Die zentrale Projektdokumentation liegt im GitHub-Wiki unter `wiki/`. Beim Klonen sollte das Submodul mitgeladen werden:
