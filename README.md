@@ -27,6 +27,33 @@ Noch offen fuer den MVP-Betrieb:
 - Backstage-Templates fuer GitHub-Issue-Erzeugung mit echten Zugangsdaten testen.
 - Demo end-to-end trocken laufen lassen.
 
+GitHub ist die versionierte Source of Truth fuer Port-Konfiguration, Demo-Entities, Entscheidungen, Dokumentation und Agenten-Artefakte.
+
+## Projektstatus
+
+Vorhanden im Repository:
+
+- Port-Blueprints fuer Teams, Systeme, Repositories, Services, Workflows und Agenten.
+- Demo-Entities fuer Teams, Systeme, Repositories, Services und Agenten.
+- Zwei Demo-Services: `customer-portal` als weitgehend vollstaendiges Beispiel und `reporting-api` mit bewusst fehlendem Runbook-Link.
+- Scorecards fuer Katalogqualitaet und IKS-Basisdaten.
+- Vorbereitete Self-Service-Actions fuer Service-Onboarding, IKS-Review und fehlende Metadaten.
+- Eine draft-Automation fuer Metadata Drift.
+- GitHub-Issue-Templates fuer Katalogpflege und IKS-Reviews.
+- Aktive GitHub-Actions-Validierung fuer YAML-Dateien in `port`, `examples` und `agents`.
+- Dependabot-Konfiguration fuer npm- und GitHub-Actions-Maintenance.
+- Wiki-Dokumentation als Submodul unter `wiki/`.
+- Agenten-Artefakte unter `agents/` mit Prompts, Checklisten und repo-versionierten Skills.
+
+Noch offen fuer den MVP-Betrieb:
+
+- Port Workspace anlegen und GitHub anbinden.
+- Blueprints und Entities in Port importieren oder synchronisieren.
+- Scorecards in Port pruefen und Demo-Views konfigurieren.
+- Port-Actions mit der echten GitHub-Issue-Erzeugung verbinden.
+- Entscheiden, ob die draft-Automation Teil der Demo bleibt oder als Zukunftspfad gezeigt wird.
+- Demo end-to-end trocken laufen lassen.
+
 ## Ziele
 
 - Services, Systeme, Teams und Repositories zentral auffindbar machen.
@@ -53,27 +80,31 @@ Noch offen fuer den MVP-Betrieb:
 ## Struktur
 
 - `.github/workflows/`: aktive GitHub-Actions-Workflows.
-- `.github/ISSUE_TEMPLATE/`: aktive GitHub-Issue-Forms fuer vorbereitete Workflows.
 - `.github/dependabot.yml`: Dependabot-Konfiguration fuer Wartung von npm- und GitHub-Actions-Abhaengigkeiten.
 - `github/workflows/`: Workflow-Vorlagen und Referenzkopien.
-- `github/issue-templates/`: historische Markdown-Referenzen fuer Issue-Templates.
+- `github/issue-templates/`: GitHub-Issue-Templates fuer vorbereitete Workflows.
 - `wiki/docs/`: Zielbild, Demo-Story, Betriebsmodell und IKS-Metadatenmodell als GitHub-Wiki-Submodul.
 - `wiki/decisions/`: Architekturentscheidungen als Teil des GitHub-Wiki-Submoduls.
-- `backstage/`: Backstage-Zielstruktur fuer Katalog, Beispielkonfiguration, Templates, TechDocs und Scorecard-Mapping.
-- `port/`: Legacy-/Migrationsreferenz aus dem initialen Port-Experiment.
-- `examples/services/`: Beispiel-Services mit Doku und Backstage-Katalogdaten.
+- `port/blueprints/`: Port-Datenmodell fuer Katalogobjekte.
+- `port/entities/`: Beispielhafte Katalogdaten.
+- `port/scorecards/`: Erste Qualitaets- und IKS-Pruefregeln.
+- `port/actions/`: Vorbereitete Self-Service-Workflows.
+- `port/automations/`: Entwuerfe fuer spaetere Port-Automationen.
+- `examples/services/`: Beispiel-Services mit Doku und Katalogdaten.
 - `agents/`: Agentenleitfaden, wiederverwendbare Prompts, Checklisten und Skills.
 
 ## Validierung
 
-Die aktive GitHub-Actions-Validierung liegt unter `.github/workflows/validate-idp-config.yml` und prueft YAML-Dateien in `backstage`, `port`, `examples`, `agents` und `.github/ISSUE_TEMPLATE`.
+Die aktive GitHub-Actions-Validierung liegt unter `.github/workflows/validate-port-config.yml` und prueft YAML-Dateien in `port`, `examples` und `agents`.
 
-Die Datei `github/workflows/validate-idp-config.yml` bleibt als Vorlage und Referenz fuer die Workflow-Konfiguration erhalten. Beide Dateien sollten bei Aenderungen an der Validierung synchron bleiben.
+Die Datei `github/workflows/validate-port-config.yml` bleibt als Vorlage und Referenz fuer die Workflow-Konfiguration erhalten. Beide Dateien sollten bei Aenderungen an der Validierung synchron bleiben.
+
+Die Validierung ist bewusst als Syntax-Check fuer bestehende Port-, Beispiel- und Agenten-Artefakte ausgelegt. `document-start` und `line-length` sind deaktiviert, damit vorhandene YAML-Dateien nicht wegen Formatstil statt Syntax scheitern.
 
 Lokal kann bei installiertem `yamllint` analog geprueft werden:
 
 ```powershell
-yamllint backstage port examples agents .github/ISSUE_TEMPLATE
+yamllint port examples agents
 ```
 
 ## Wiki-Submodul
