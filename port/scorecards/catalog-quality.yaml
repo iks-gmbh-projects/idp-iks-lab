@@ -6,9 +6,17 @@ rules:
     title: Technical owner is assigned
     query: $.relations.owner != null
     level: bronze
+  - identifier: has-system
+    title: System is assigned
+    query: $.relations.system != null
+    level: bronze
   - identifier: has-repository
     title: Repository is linked
     query: $.relations.repository != null
+    level: bronze
+  - identifier: has-lifecycle
+    title: Lifecycle is classified
+    query: $.properties.lifecycle != null && $.properties.lifecycle != ""
     level: bronze
   - identifier: has-documentation
     title: Documentation link is present
