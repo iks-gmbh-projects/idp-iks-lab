@@ -20,6 +20,6 @@
       ]
     }
   },
-  "postCreateCommand": "git config --global --add safe.directory /IdeaProjects/idp-iks-lab && git config --global --add safe.directory /IdeaProjects/idp-iks-lab/wiki && git config --global --add safe.directory ${containerWorkspaceFolder} && git config --global --add safe.directory ${containerWorkspaceFolder}/wiki",
+  "postCreateCommand": "git config --global --add safe.directory /IdeaProjects/idp-iks-lab && git config --global --add safe.directory /IdeaProjects/idp-iks-lab/wiki",
   "remoteUser": "node"
 }
