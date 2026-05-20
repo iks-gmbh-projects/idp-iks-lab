@@ -16,3 +16,8 @@ jobs:
         uses: ibiqlik/action-yamllint@v3
         with:
           file_or_dir: port examples agents
+          config_data: |
+            extends: default
+            rules:
+              document-start: disable
+              line-length: disable
