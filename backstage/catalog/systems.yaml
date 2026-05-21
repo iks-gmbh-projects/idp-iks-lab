@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: customer-experience
+  title: Customer Experience
+  description: Services for customer-facing journeys.
+  annotations:
+    iks.dev/domain: Customer
+    iks.dev/criticality: high
+spec:
+  owner: group:default/platform-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: management-reporting
+  title: Management Reporting
+  description: Reporting and analytics services for management views.
+  annotations:
+    iks.dev/domain: Finance
+    iks.dev/criticality: medium
+spec:
+  owner: group:default/platform-team

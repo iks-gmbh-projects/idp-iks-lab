@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backstage Catalog Maintainer"
+  short_description: "Maintain Backstage catalog artifacts"
+  default_prompt: "Use $backstage-catalog-maintainer to review or update Backstage catalog descriptors, locations, templates, issue forms, and scorecard mappings."

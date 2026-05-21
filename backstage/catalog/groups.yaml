@@ -1,0 +1,47 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: platform-team
+  title: Platform Team
+  description: Platform Engineering team for the IDP lab.
+  annotations:
+    iks.dev/email: platform@example.com
+    iks.dev/area: Platform Engineering
+spec:
+  type: team
+  profile:
+    displayName: Platform Team
+    email: platform@example.com
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: iks-review-board
+  title: IKS Review Board
+  description: Governance group for IKS review requests.
+  annotations:
+    iks.dev/email: iks-review@example.com
+    iks.dev/area: Governance
+spec:
+  type: team
+  profile:
+    displayName: IKS Review Board
+    email: iks-review@example.com
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: customer-success
+  title: Customer Success
+  description: Business owner group for customer-facing services.
+  annotations:
+    iks.dev/email: customer-success@example.com
+    iks.dev/area: Business
+spec:
+  type: team
+  profile:
+    displayName: Customer Success
+    email: customer-success@example.com
+  children: []

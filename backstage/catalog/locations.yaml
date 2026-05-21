@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: iks-idp-lab-root
+  description: Root location for IKS IDP lab demo catalog entities.
+spec:
+  targets:
+    - ./groups.yaml
+    - ./systems.yaml
+    - ../templates/catalog-metadata-fix/template.yaml
+    - ../templates/iks-review-request/template.yaml
+    - ../templates/service-onboarding/template.yaml
+    - ../../examples/services/customer-portal/catalog-info.yaml
+    - ../../examples/services/reporting-api/catalog-info.yaml

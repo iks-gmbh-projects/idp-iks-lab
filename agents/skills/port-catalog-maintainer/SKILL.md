@@ -1,9 +1,11 @@
 ---
 name: port-catalog-maintainer
-description: Maintain and review Port catalog artifacts in the IDP IKS lab repository, including blueprints, entities, scorecards, actions, automations, and example service catalog files. Use when Codex needs to edit or inspect Port YAML, preserve catalog identifiers and relations, update related docs, or validate catalog configuration.
+description: Maintain and review legacy Port catalog artifacts in the IDP IKS lab repository. Use only for migration-reference work; Backstage is the target path for new catalog changes.
 ---
 
 # Port Catalog Maintainer
+
+> Legacy skill. Backstage is the target platform for new catalog and workflow work. Prefer `backstage-catalog-maintainer` unless the task explicitly touches legacy Port migration artifacts.
 
 ## Workflow
 
@@ -16,10 +18,10 @@ description: Maintain and review Port catalog artifacts in the IDP IKS lab repos
 
 ## Reference Loading
 
-- Read `references/port-catalog-map.md` when you need the repo-specific Port artifact map, relation rules, or validation reminders.
+- Read `references/port-catalog-map.md` when you need the repo-specific legacy Port artifact map, relation rules, or validation reminders.
 
 ## Output Expectations
 
-- State the catalog behavior changed.
+- State the legacy catalog behavior changed.
 - List validation performed.
-- Call out any import, identifier, relation, or Port workspace follow-up risk.
+- Call out any import, identifier, relation, or migration follow-up risk.

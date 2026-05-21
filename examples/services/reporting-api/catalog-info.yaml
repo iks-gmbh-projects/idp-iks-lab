@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: reporting-api
+  title: Reporting API
+  description: Demo service for management reporting data access.
+  annotations:
+    backstage.io/source-location: url:https://github.com/example-org/reporting-api
+    backstage.io/techdocs-ref: dir:./docs
+    iks.dev/business-owner: customer-success
+    iks.dev/criticality: medium
+    iks.dev/protection-need: normal
+    iks.dev/data-class: confidential
+    iks.dev/compliance-scope: iks
+  links:
+    - url: https://github.com/example-org/reporting-api/tree/main/docs
+      title: Documentation
+      icon: docs
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/platform-team
+  system: management-reporting

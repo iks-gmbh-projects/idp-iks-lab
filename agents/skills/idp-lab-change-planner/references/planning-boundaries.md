@@ -2,10 +2,11 @@
 
 ## MVP In Scope
 
-- Port service catalog model and demo entities.
-- IKS metadata visibility and scorecards.
-- Low-risk workflows that create tasks, checklists, or review requests.
-- Agent and workflow blueprints as future extension points.
+- Backstage catalog descriptors, example config, and demo entities.
+- IKS metadata visibility and advisory scorecards/checks.
+- Low-risk workflows that create GitHub issues, checklists, or review requests.
+- Agent and workflow artifacts as future extension points.
+- Legacy Port artifacts only as migration reference.
 - Documentation and ADRs that clarify operating model decisions.
 
 ## MVP Out Of Scope

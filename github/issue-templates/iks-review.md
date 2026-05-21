@@ -1,8 +1,10 @@
 # IKS Review Request
 
-## Service
+> Historical reference only. Use `.github/ISSUE_TEMPLATE/iks-review.yml` for the active Backstage issue form.
 
-<!-- Port service identifier einfuegen -->
+## Backstage component/entity reference
+
+<!-- Example: component:default/customer-portal -->
 
 ## Anlass
 
