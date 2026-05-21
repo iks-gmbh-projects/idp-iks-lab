@@ -16,5 +16,5 @@ inputs:
     required: false
 invocation:
   type: github-workflow
-  workflow: validate-port-config.yml
-  note: Replace this skeleton with the Port GitHub workflow invocation once the GitHub integration is connected.
+  workflow: validate-idp-config.yml
+  note: Legacy Port action reference only; Backstage Software Templates are the target workflow path.

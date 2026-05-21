@@ -66,9 +66,9 @@ Noch offen fuer den MVP-Betrieb:
 
 ## Validierung
 
-Die aktive GitHub-Actions-Validierung liegt unter `.github/workflows/validate-port-config.yml` und prueft YAML-Dateien in `backstage`, `port`, `examples`, `agents` und `.github/ISSUE_TEMPLATE`.
+Die aktive GitHub-Actions-Validierung liegt unter `.github/workflows/validate-idp-config.yml` und prueft YAML-Dateien in `backstage`, `port`, `examples`, `agents` und `.github/ISSUE_TEMPLATE`.
 
-Die Datei `github/workflows/validate-port-config.yml` bleibt als Vorlage und Referenz fuer die Workflow-Konfiguration erhalten. Beide Dateien sollten bei Aenderungen an der Validierung synchron bleiben. Eine spaetere Umbenennung zu `validate-idp-config.yml` ist sinnvoll, aber nicht erforderlich fuer die Migration.
+Die Datei `github/workflows/validate-idp-config.yml` bleibt als Vorlage und Referenz fuer die Workflow-Konfiguration erhalten. Beide Dateien sollten bei Aenderungen an der Validierung synchron bleiben.
 
 Lokal kann bei installiertem `yamllint` analog geprueft werden:
 
