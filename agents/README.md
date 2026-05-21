@@ -7,4 +7,6 @@ This directory contains reusable guidance for agentic development in the IDP IKS
 - `skills/`: repo-versioned Codex skill sources. Mirror these into the local Codex skills directory when they should be discoverable by Codex.
 - `validation.md`: validation commands and manual fallback checks.
 
+Backstage is the target platform for new catalog and workflow work. Port-specific artifacts are retained only for migration reference.
+
 The repository copy is the source of truth for these artifacts.

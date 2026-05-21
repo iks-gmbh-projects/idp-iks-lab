@@ -1,5 +1,7 @@
 # Catalog Maintenance Prompt
 
-Use this prompt when changing Port blueprints, entities, scorecards, or actions.
+Use this prompt when changing Backstage catalog descriptors, locations, templates, scorecard/check mappings, active issue forms, or example service catalog files.
 
-Review the requested catalog change against the existing Port model. Keep identifiers stable, update related examples and docs when a schema changes, and run the lightest YAML validation available. Summarize changed catalog behavior, validation, and any import or relation risks.
+Review the requested catalog change against the existing Backstage target model. Keep entity names and refs stable, update related examples and docs when metadata semantics change, and run the lightest YAML validation available. Summarize changed catalog behavior, validation, and any Backstage ingestion, relation, or migration risks.
+
+If the task touches `port/`, treat it as legacy migration reference unless the user explicitly asks for Port-specific work.

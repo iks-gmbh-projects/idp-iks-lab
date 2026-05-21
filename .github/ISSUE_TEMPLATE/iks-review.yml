@@ -1,0 +1,50 @@
+name: IKS Review Request
+description: Request a manual IKS review for a Backstage component.
+title: "IKS review: "
+labels:
+  - iks
+  - review
+body:
+  - type: input
+    id: component_ref
+    attributes:
+      label: Backstage component/entity reference
+      placeholder: "component:default/customer-portal"
+    validations:
+      required: true
+  - type: input
+    id: descriptor_path
+    attributes:
+      label: Catalog descriptor path
+      placeholder: examples/services/customer-portal/catalog-info.yaml
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Review reason
+      description: Why is the review required?
+    validations:
+      required: true
+  - type: checkboxes
+    id: fields_to_review
+    attributes:
+      label: Zu pruefende Angaben
+      options:
+        - label: Fachlicher Owner
+        - label: Technischer Owner
+        - label: Kritikalitaet
+        - label: Schutzbedarf
+        - label: Datenklasse
+        - label: Dokumentation
+        - label: Runbook
+  - type: dropdown
+    id: requested_decision
+    attributes:
+      label: Gewuenschte Entscheidung
+      options:
+        - Freigegeben
+        - Freigegeben mit Auflagen
+        - Nacharbeit erforderlich
+    validations:
+      required: false

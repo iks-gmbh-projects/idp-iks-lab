@@ -1,0 +1,41 @@
+name: Backstage Migration Task
+description: Track migration work from the Port experiment to the Backstage target structure.
+title: "Backstage migration: "
+labels:
+  - backstage
+  - migration
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - docs
+        - catalog
+        - templates
+        - scorecards
+        - validation
+        - agents
+        - cleanup
+    validations:
+      required: true
+  - type: input
+    id: source_port_file
+    attributes:
+      label: Source Port file, if applicable
+      placeholder: port/entities/services.yaml
+    validations:
+      required: false
+  - type: input
+    id: target_backstage_file
+    attributes:
+      label: Target Backstage file
+      placeholder: backstage/catalog/components.yaml
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria and validation evidence
+    validations:
+      required: true

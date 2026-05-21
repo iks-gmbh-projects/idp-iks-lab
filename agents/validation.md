@@ -1,25 +1,30 @@
 # Agent Validation Guide
 
-Use these checks after changing agent artifacts, Port configuration, or example catalog data.
+Use these checks after changing agent artifacts, Backstage catalog/configuration, issue forms, legacy Port references, or example catalog data.
 
 ## YAML
 
-- Preferred local command: `yamllint port examples agents`
+- Preferred local command: `yamllint backstage port examples agents .github/ISSUE_TEMPLATE`
 - GitHub workflow template: `github/workflows/validate-port-config.yml`
-- If `yamllint` is unavailable, parse the touched YAML with an available YAML parser and manually inspect identifiers, relations, and required properties.
+- If `yamllint` is unavailable, parse the touched YAML with an available YAML parser and manually inspect identifiers, refs, relations, and required metadata.
 
-## Port Catalog Consistency
+## Backstage Catalog Consistency
 
-- Blueprint identifiers must remain stable unless the change explicitly migrates entities.
-- Entity `blueprint` values must match files under `port/blueprints/`.
-- Entity relations must point to existing identifiers in the target entity file.
-- Scorecards and actions should use field names that exist in the relevant blueprint schema or relations.
+- Entity `kind`, `metadata.name`, `spec.owner`, and `spec.system` values should remain stable unless the change explicitly migrates them.
+- Component owners must point to existing `Group` entities.
+- Component systems must point to existing `System` entities.
+- Service-local `examples/services/*/catalog-info.yaml` files should stay consistent with central demo descriptors in `backstage/catalog/`.
+- IKS annotations should use the `iks.dev/` namespace documented in `wiki/docs/iks-metadata-model.md`.
+- Example app config must not include secrets, real OAuth credentials, or production-only endpoints.
+
+## Legacy Port Consistency
+
+- `port/` is a migration reference. Avoid adding new Port-only behavior unless explicitly requested.
+- When legacy Port files are touched, preserve identifiers and relations unless the task is a migration cleanup.
 
 ## Codex Skills
 
-Validate each skill:
-
-`C:\Users\wla_dev\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe C:\Users\wla_dev\.codex\skills\.system\skill-creator\scripts\quick_validate.py agents\skills\<skill-name>`
+Validate each changed skill with the local Codex `quick_validate.py` script when available.
 
 Check that:
 
@@ -29,7 +34,7 @@ Check that:
 
 ## Documentation Consistency
 
-- Schema changes should be reflected in `wiki/docs/iks-metadata-model.md` when they affect service metadata.
+- Schema or annotation changes should be reflected in `wiki/docs/iks-metadata-model.md` when they affect service metadata.
 - Governance or scope decisions should be captured in `wiki/decisions/` when they change the MVP boundary.
 - Demo flow changes should be reflected in `wiki/docs/demo-story.md`.
 

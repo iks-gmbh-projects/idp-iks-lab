@@ -1,4 +1,4 @@
-name: Validate Port configuration
+name: Validate IDP configuration
 
 on:
   pull_request:
@@ -15,7 +15,7 @@ jobs:
       - name: Validate YAML syntax
         uses: ibiqlik/action-yamllint@v3
         with:
-          file_or_dir: port examples agents
+          file_or_dir: backstage port examples agents .github/ISSUE_TEMPLATE
           config_data: |
             extends: default
             rules:

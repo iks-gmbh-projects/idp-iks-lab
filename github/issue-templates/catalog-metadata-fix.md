@@ -1,19 +1,24 @@
 # Catalog Metadata Fix
 
-## Service
+> Historical reference only. Use `.github/ISSUE_TEMPLATE/catalog-metadata-fix.yml` for the active Backstage issue form.
 
-<!-- Port service identifier einfuegen -->
+## Backstage component/entity reference
+
+<!-- Example: component:default/customer-portal -->
 
 ## Fehlende oder falsche Metadaten
 
-- [ ] Owner
-- [ ] Lifecycle
+- [ ] Technical owner
+- [ ] Business owner
+- [ ] System
 - [ ] Repository
-- [ ] Dokumentation
+- [ ] Lifecycle
+- [ ] Documentation
 - [ ] Runbook
-- [ ] Kritikalitaet
-- [ ] Schutzbedarf
-- [ ] Datenklasse
+- [ ] Criticality
+- [ ] Protection need
+- [ ] Data class
+- [ ] Compliance scope
 
 ## Hinweise
 

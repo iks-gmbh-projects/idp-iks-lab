@@ -1,0 +1,47 @@
+name: Catalog Metadata Fix
+description: Track missing or incorrect Backstage catalog or IKS metadata.
+title: "Catalog metadata: "
+labels:
+  - catalog
+  - metadata
+body:
+  - type: input
+    id: component_ref
+    attributes:
+      label: Backstage component/entity reference
+      description: "Example: component:default/customer-portal"
+      placeholder: "component:default/customer-portal"
+    validations:
+      required: true
+  - type: input
+    id: descriptor_path
+    attributes:
+      label: Catalog descriptor path
+      placeholder: examples/services/customer-portal/catalog-info.yaml
+    validations:
+      required: true
+  - type: dropdown
+    id: metadata_category
+    attributes:
+      label: Missing or incorrect metadata
+      options:
+        - Technical owner
+        - Business owner
+        - System
+        - Repository
+        - Lifecycle
+        - Documentation
+        - Runbook
+        - Criticality
+        - Protection need
+        - Data class
+        - Compliance scope
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details and acceptance criteria
+      description: Add scorecard/check evidence, expected value, and validation steps.
+    validations:
+      required: false
