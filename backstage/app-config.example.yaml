@@ -1,0 +1,26 @@
+app:
+  title: IKS Developer Portal
+  baseUrl: http://localhost:3000
+backend:
+  baseUrl: http://localhost:7007
+  listen:
+    port: 7007
+organization:
+  name: IKS
+catalog:
+  locations:
+    - type: file
+      target: ./catalog/locations.yaml
+      rules:
+        - allow:
+            - Location
+            - Group
+            - System
+            - Component
+            - Template
+techdocs:
+  builder: local
+  generator:
+    runIn: local
+  publisher:
+    type: local
