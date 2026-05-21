@@ -5,7 +5,7 @@ Use these checks after changing agent artifacts, Backstage catalog/configuration
 ## YAML
 
 - Preferred local command: `yamllint backstage port examples agents .github/ISSUE_TEMPLATE`
-- GitHub workflow template: `github/workflows/validate-port-config.yml`
+- GitHub workflow template: `github/workflows/validate-idp-config.yml`
 - If `yamllint` is unavailable, parse the touched YAML with an available YAML parser and manually inspect identifiers, refs, relations, and required metadata.
 
 ## Backstage Catalog Consistency
