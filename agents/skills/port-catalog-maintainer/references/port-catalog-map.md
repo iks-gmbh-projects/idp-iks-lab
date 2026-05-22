@@ -1,4 +1,6 @@
-# Port Catalog Map
+# Legacy Port Catalog Map
+
+> Legacy reference only. Backstage is the target platform for new catalog and workflow work; use this map only when a task explicitly touches retained Port migration artifacts.
 
 ## Primary Paths
 

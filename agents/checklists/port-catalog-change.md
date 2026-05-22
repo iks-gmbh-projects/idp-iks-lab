@@ -1,4 +1,4 @@
-# Port Catalog Change Checklist
+# Legacy Port Catalog Change Checklist
 
 > Legacy reference only. Backstage is the target catalog structure for new work. Use `agents/checklists/backstage-catalog-change.md` unless a task explicitly changes legacy Port migration artifacts.
 

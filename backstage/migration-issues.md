@@ -2,38 +2,39 @@
 
 Use this list to track the cleaned Backstage migration queue. The repository issue forms under `.github/ISSUE_TEMPLATE/` provide the active structure. External issue creation or mutation requires explicit human approval; issue #26 records the approved cleanup follow-up.
 
-## Active Backstage migration issues
+## Open Backstage migration issues
 
 1. [#17 `Backstage IDP MVP: Architecture decision and migration anchor`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/17)
    - Scope: ADR 0003, ADR 0001 supersession, and target-platform decision history.
    - Acceptance: wiki decisions clearly point to Backstage as the target.
-2. [#18 `Backstage IDP MVP: Finalize catalog schema and GitHub source-of-truth format`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/18)
-   - Scope: Backstage `Component`, `System`, `Group`, and `Location` modeling.
-   - Acceptance: demo Components have valid owners, systems, source locations, TechDocs refs, and IKS annotations, with no duplicate entity import source.
-3. [#19 `Backstage IDP MVP: Scaffold local Backstage app/runtime`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/19)
+2. [#19 `Backstage IDP MVP: Scaffold local Backstage app/runtime`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/19)
    - Scope: local Backstage app/runtime or explicit external-runtime instructions.
    - Acceptance: local Backstage can read catalog data from this repository without Kubernetes as an MVP prerequisite.
-4. [#20 `Backstage IDP MVP: Configure service catalog views and filters`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/20)
+3. [#20 `Backstage IDP MVP: Configure service catalog views and filters`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/20)
    - Scope: Backstage catalog overview, service detail pages, and demo navigation/filters.
    - Acceptance: `customer-portal` and `reporting-api` support the demo story.
-5. [#21 `Backstage IDP MVP: Implement advisory catalog quality and IKS checks`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/21)
+4. [#21 `Backstage IDP MVP: Implement advisory catalog quality and IKS checks`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/21)
    - Scope: Tech Insights, a scorecard plugin, or local/CI report mapped from `backstage/scorecards/README.md`.
    - Acceptance: every previous rule has a Backstage-compatible field, annotation, or explicit deferred reason.
-6. [#22 `Backstage IDP MVP: Replace Port actions with Software Templates and GitHub issue workflows`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/22)
+5. [#22 `Backstage IDP MVP: Replace Port actions with Software Templates and GitHub issue workflows`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/22)
    - Scope: Backstage Software Templates and active GitHub Issue Forms.
    - Acceptance: workflows create advisory GitHub-tracked tasks only.
-7. [#23 `Backstage IDP MVP: Finish repository consistency cleanup`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/23)
+6. [#23 `Backstage IDP MVP: Finish repository consistency cleanup`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/23)
    - Scope: root README, wiki landing/navigation, domain docs, workflows, issue templates, and agent guidance.
    - Acceptance: target-platform language names Backstage; Port appears only as legacy/migration context.
-8. [#24 `Backstage IDP MVP: Package and document local/demo runtime`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/24)
+7. [#24 `Backstage IDP MVP: Package and document local/demo runtime`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/24)
    - Scope: local/demo runtime documentation, demo data loading, secrets documentation, and fallback story.
    - Acceptance: a contributor can run or understand the local Backstage demo path from a clean checkout.
-9. [#15 `Backstage IDP MVP: Run validation and complete demo dry-run`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/15)
+8. [#15 `Backstage IDP MVP: Run validation and complete demo dry-run`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/15)
    - Scope: YAML validation and manual demo consistency pass.
    - Acceptance: demo can be completed without production system changes.
-10. [#26 `Backstage IDP MVP: Clean follow-up after target switch`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/26)
+9. [#26 `Backstage IDP MVP: Clean follow-up after target switch`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/26)
     - Scope: tracker cleanup, stale-language cleanup, and issue mapping updates.
     - Acceptance: this file and the issue tracker agree on the active Backstage migration queue.
+
+## Completed Backstage migration issues
+
+- #18 `Backstage IDP MVP: Finalize catalog schema and GitHub source-of-truth format` is closed as completed. Its catalog-schema scope remains represented by the current Backstage catalog descriptors and demo service `catalog-info.yaml` files.
 
 ## Superseded Port issues
 
