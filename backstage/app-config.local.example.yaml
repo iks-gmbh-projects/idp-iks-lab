@@ -1,0 +1,41 @@
+# Local-only Backstage runtime config example.
+#
+# This file assumes the generated Backstage app is a sibling directory:
+#
+#   <workspace>/idp-iks-lab
+#   <workspace>/iks-backstage-runtime
+#
+# Copy this file into the generated app as app-config.local.yaml, or pass it
+# with a Backstage config flag. If your local layout differs, adjust the file
+# location target in your local copy and do not commit machine-specific paths.
+
+app:
+  title: IKS Developer Portal
+  baseUrl: http://localhost:3000
+
+backend:
+  baseUrl: http://localhost:7007
+  listen:
+    port: 7007
+
+organization:
+  name: IKS
+
+catalog:
+  locations:
+    - type: file
+      target: ../idp-iks-lab/backstage/catalog/locations.yaml
+      rules:
+        - allow:
+            - Location
+            - Group
+            - System
+            - Component
+            - Template
+
+techdocs:
+  builder: local
+  generator:
+    runIn: local
+  publisher:
+    type: local

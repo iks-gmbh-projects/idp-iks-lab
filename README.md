@@ -14,13 +14,14 @@ Vorhanden im Repository:
 - Zwei Demo-Services: `customer-portal` als weitgehend vollstaendiges Beispiel und `reporting-api` mit bewusst fehlendem Runbook-Link.
 - GitHub-Issue-Forms fuer Katalogpflege und IKS-Reviews.
 - Aktive GitHub-Actions-Validierung fuer YAML-Dateien in `backstage`, `port`, `examples`, `agents` und `.github/ISSUE_TEMPLATE`.
+- Dokumentierter lokaler Backstage-MVP-Pfad unter `backstage/runtime/`, der eine extern generierte Runtime auf diesen Repository-Katalog zeigt.
 - Wiki-Dokumentation als Submodul unter `wiki/`.
 - Agenten-Artefakte unter `agents/` mit Prompts, Checklisten und repo-versionierten Skills.
 
 Noch offen fuer den MVP-Betrieb:
 
-- Entscheiden, ob dieses Repository nur Backstage-Katalog-/Konfigurationsquelle bleibt oder spaeter auch eine lauffaehige Backstage-App enthaelt.
-- Backstage-Instanz lokal oder selbstgehostet bereitstellen.
+- Lokalen Backstage-MVP ueber die dokumentierte externe Runtime unter `backstage/runtime/` starten und validieren.
+- Spaeter entscheiden, ob eine lauffaehige Backstage-App dauerhaft in dieses Repository aufgenommen wird oder extern bleibt.
 - Catalog-Locations aus `backstage/catalog/locations.yaml` in Backstage einbinden.
 - Demo-Services ueber `catalog-info.yaml` pruefen.
 - Scorecard-Ansatz finalisieren: Tech Insights, Scorecard-Plugin oder GitHub-basierter Report.
@@ -58,7 +59,7 @@ Noch offen fuer den MVP-Betrieb:
 - `github/issue-templates/`: GitHub-Issue-Templates fuer vorbereitete Workflows.
 - `wiki/docs/`: Zielbild, Demo-Story, Betriebsmodell und IKS-Metadatenmodell als GitHub-Wiki-Submodul.
 - `wiki/decisions/`: Architekturentscheidungen als Teil des GitHub-Wiki-Submoduls.
-- `backstage/`: Backstage-Zielstruktur fuer Catalog-Locations, Beispielkonfiguration, Templates, TechDocs und Scorecard-Mapping.
+- `backstage/`: Backstage-Zielstruktur fuer Catalog-Locations, Beispielkonfiguration, lokale Runtime-Hinweise, Templates, TechDocs und Scorecard-Mapping.
 - `examples/services/`: Beispiel-Services mit Doku und Backstage `catalog-info.yaml` Dateien.
 - `port/`: Legacy-Migrationsreferenz aus dem initialen Port-Experiment.
 - `agents/`: Agentenleitfaden, wiederverwendbare Prompts, Checklisten und Skills.
@@ -102,7 +103,7 @@ Wiki-Aenderungen brauchen zwei Commits: zuerst im `wiki`-Submodul committen und 
 
 ## Naechste Schritte
 
-1. Backstage-Instanz fuer den MVP bereitstellen oder vorhandene Instanz verwenden.
+1. Lokale Backstage-Runtime gemaess `backstage/runtime/README.md` erzeugen oder vorhandene Instanz verwenden.
 2. `backstage/catalog/locations.yaml` als Catalog-Location anbinden.
 3. Demo-Entities und Service-nahe `catalog-info.yaml` Dateien importieren.
 4. TechDocs fuer die Beispielservices pruefen.
