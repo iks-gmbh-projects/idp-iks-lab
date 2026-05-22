@@ -22,8 +22,7 @@ Noch offen fuer den MVP-Betrieb:
 
 - Lokalen Backstage-MVP ueber die dokumentierte externe Runtime unter `backstage/runtime/` starten und validieren.
 - Spaeter entscheiden, ob eine lauffaehige Backstage-App dauerhaft in dieses Repository aufgenommen wird oder extern bleibt.
-- Catalog-Locations aus `backstage/catalog/locations.yaml` in Backstage einbinden.
-- Demo-Services ueber `catalog-info.yaml` pruefen.
+- Catalog-Views und Demo-Navigation gemaess `backstage/catalog/demo-views.md` pruefen.
 - Scorecard-Ansatz finalisieren: Tech Insights, Scorecard-Plugin oder GitHub-basierter Report.
 - Backstage-Templates fuer GitHub-Issue-Erzeugung mit echten Zugangsdaten testen.
 - Demo end-to-end trocken laufen lassen.
@@ -46,10 +45,11 @@ Noch offen fuer den MVP-Betrieb:
 ## Demo-Ablauf
 
 1. Backstage zeigt Teams, Systeme und Demo-Services im Software Catalog.
-2. Ein Service wird geoeffnet und zeigt Owner, Lifecycle, Doku und IKS-Metadaten.
-3. Scorecards oder Backstage-Checks markieren vollstaendige und unvollstaendige Metadaten.
-4. Ein Software Template oder GitHub Issue Form erzeugt eine Review- oder Katalogpflege-Aufgabe in GitHub.
-5. Die vorbereiteten Agenten- und Workflow-Artefakte zeigen den Ausbaupfad.
+2. Catalog-Views fuer alle Services, IKS-relevante Services und kritische Services werden gemaess `backstage/catalog/demo-views.md` geprueft.
+3. Ein Service wird geoeffnet und zeigt Owner, Lifecycle, Doku und IKS-Metadaten.
+4. Scorecards oder Backstage-Checks markieren vollstaendige und unvollstaendige Metadaten.
+5. Ein Software Template oder GitHub Issue Form erzeugt eine Review- oder Katalogpflege-Aufgabe in GitHub.
+6. Die vorbereiteten Agenten- und Workflow-Artefakte zeigen den Ausbaupfad.
 
 ## Struktur
 
@@ -109,4 +109,4 @@ Wiki-Aenderungen brauchen zwei Commits: zuerst im `wiki`-Submodul committen und 
 4. TechDocs fuer die Beispielservices pruefen.
 5. Scorecard-/Tech-Insights-Ansatz fuer Katalogqualitaet und IKS-Basisdaten entscheiden.
 6. Templates oder GitHub Issue Forms fuer Review- und Katalogpflege-Workflows testen.
-7. Demo-Ablauf aus `wiki/docs/demo-story.md` end-to-end pruefen.
+7. Catalog-Views gemaess `backstage/catalog/demo-views.md` und Demo-Ablauf aus `wiki/docs/demo-story.md` end-to-end pruefen.
