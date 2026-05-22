@@ -1,3 +1,6 @@
+# Migration/reference copy only. Service Component entities are imported from
+# examples/services/*/catalog-info.yaml via locations.yaml; do not import this
+# file at the same time or Backstage will see duplicate Component refs.
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:

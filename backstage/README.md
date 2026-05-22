@@ -7,7 +7,7 @@ GitHub remains the versioned source of truth. Backstage should read catalog loca
 ## Contents
 
 - `app-config.example.yaml`: non-secret example configuration for a Backstage instance.
-- `catalog/`: Backstage catalog locations and shared demo entities. Service `Component` entities are imported from `examples/services/*/catalog-info.yaml`; `catalog/components.yaml` is retained as a central reference copy during migration.
+- `catalog/`: Backstage catalog locations, shared demo entities, and the catalog schema/source-of-truth rules. Service `Component` entities are imported from `examples/services/*/catalog-info.yaml`; `catalog/components.yaml` is retained only as a reference copy during migration and is not imported by `catalog/locations.yaml`.
 - `templates/`: advisory Software Template definitions for GitHub-tracked workflows.
 - `techdocs/`: example TechDocs configuration.
 - `scorecards/`: mapping from the previous scorecard concepts to a Backstage-compatible approach.
