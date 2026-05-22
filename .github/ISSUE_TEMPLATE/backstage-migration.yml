@@ -1,5 +1,5 @@
 name: Backstage Migration Task
-description: Track migration work from the Port experiment to the Backstage target structure.
+description: Track migration and cleanup work for Backstage catalog entities and supporting docs.
 title: "Backstage migration: "
 labels:
   - backstage
@@ -20,10 +20,10 @@ body:
     validations:
       required: true
   - type: input
-    id: source_port_file
+    id: source_reference
     attributes:
-      label: Source Port file, if applicable
-      placeholder: port/entities/services.yaml
+      label: Source reference, if applicable
+      placeholder: examples/services/customer-portal/catalog-info.yaml
     validations:
       required: false
   - type: input

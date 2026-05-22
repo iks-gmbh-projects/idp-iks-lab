@@ -27,33 +27,6 @@ Noch offen fuer den MVP-Betrieb:
 - Backstage-Templates fuer GitHub-Issue-Erzeugung mit echten Zugangsdaten testen.
 - Demo end-to-end trocken laufen lassen.
 
-GitHub ist die versionierte Source of Truth fuer Port-Konfiguration, Demo-Entities, Entscheidungen, Dokumentation und Agenten-Artefakte.
-
-## Projektstatus
-
-Vorhanden im Repository:
-
-- Port-Blueprints fuer Teams, Systeme, Repositories, Services, Workflows und Agenten.
-- Demo-Entities fuer Teams, Systeme, Repositories, Services und Agenten.
-- Zwei Demo-Services: `customer-portal` als weitgehend vollstaendiges Beispiel und `reporting-api` mit bewusst fehlendem Runbook-Link.
-- Scorecards fuer Katalogqualitaet und IKS-Basisdaten.
-- Vorbereitete Self-Service-Actions fuer Service-Onboarding, IKS-Review und fehlende Metadaten.
-- Eine draft-Automation fuer Metadata Drift.
-- GitHub-Issue-Templates fuer Katalogpflege und IKS-Reviews.
-- Aktive GitHub-Actions-Validierung fuer YAML-Dateien in `port`, `examples` und `agents`.
-- Dependabot-Konfiguration fuer npm- und GitHub-Actions-Maintenance.
-- Wiki-Dokumentation als Submodul unter `wiki/`.
-- Agenten-Artefakte unter `agents/` mit Prompts, Checklisten und repo-versionierten Skills.
-
-Noch offen fuer den MVP-Betrieb:
-
-- Port Workspace anlegen und GitHub anbinden.
-- Blueprints und Entities in Port importieren oder synchronisieren.
-- Scorecards in Port pruefen und Demo-Views konfigurieren.
-- Port-Actions mit der echten GitHub-Issue-Erzeugung verbinden.
-- Entscheiden, ob die draft-Automation Teil der Demo bleibt oder als Zukunftspfad gezeigt wird.
-- Demo end-to-end trocken laufen lassen.
-
 ## Ziele
 
 - Services, Systeme, Teams und Repositories zentral auffindbar machen.

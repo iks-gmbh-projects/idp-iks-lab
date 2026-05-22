@@ -7,7 +7,7 @@ description: Review service catalog metadata for IKS readiness in the IDP IKS la
 
 ## Workflow
 
-1. Read `wiki/docs/iks-metadata-model.md`, the target service entity, and any service-local `catalog.yaml`.
+1. Read `wiki/docs/iks-metadata-model.md`, the target service entity, and any service-local Backstage `catalog-info.yaml`; use `catalog.yaml` only as a legacy Port reference if needed.
 2. Compare the service against MVP catalog readiness: owner, business owner, lifecycle, repository, documentation, criticality, protection need, and data class.
 3. Also report operational gaps such as empty runbook links, missing `iks` compliance scope for IKS-relevant services, or broken relations.
 4. Prefer concrete YAML edits or issue text over broad policy language.
