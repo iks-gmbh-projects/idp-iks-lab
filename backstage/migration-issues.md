@@ -9,7 +9,7 @@ Use this list to track the cleaned Backstage migration queue. The repository iss
    - Acceptance: wiki decisions clearly point to Backstage as the target.
 2. [#19 `Backstage IDP MVP: Scaffold local Backstage app/runtime`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/19)
    - Scope: local Backstage app/runtime or explicit external-runtime instructions.
-   - Acceptance: local Backstage can read catalog data from this repository without Kubernetes as an MVP prerequisite.
+   - Acceptance: local Backstage is configured/documented to read catalog data from this repository without Kubernetes as an MVP prerequisite; runtime setup is documented under `backstage/runtime/`, with full runtime smoke validation tracked by #24/#15 unless performed in the implementing PR.
 3. [#20 `Backstage IDP MVP: Configure service catalog views and filters`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/20)
    - Scope: Backstage catalog overview, service detail pages, and demo navigation/filters.
    - Acceptance: `customer-portal` and `reporting-api` support the demo story.

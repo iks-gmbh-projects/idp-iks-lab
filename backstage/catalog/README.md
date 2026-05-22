@@ -22,6 +22,8 @@ GitHub is the versioned source of truth for catalog descriptors. For service `Co
 
 It intentionally does not import `./components.yaml`.
 
+The local runtime guide in `../runtime/README.md` shows how a generated Backstage app can load this root location.
+
 ## Entity shapes
 
 ### Location

@@ -1,5 +1,6 @@
 # Backstage Catalog Change Checklist
 
+- Start reviews with `agents/checklists/code-review-pyramid.md`: treat Backstage entity names, refs, relations, annotations, locations, templates, issue forms, and validation workflow behavior as API/contract surfaces.
 - Confirm the target artifact type: catalog entity, location, template, scorecard/check mapping, issue form, or example service catalog.
 - Keep entity names, refs, relation targets, and `iks.dev/` annotation names stable unless migration is part of the task.
 - Update demo entities when adding required fields.

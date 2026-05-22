@@ -16,6 +16,7 @@ This repository is an experimental Internal Developer Platform MVP for IKS. Trea
 - Update docs, Backstage artifacts, examples, and workflow references together when behavior or metadata shape changes.
 - Use ADRs in `wiki/decisions/` for meaningful architectural or governance choices. Do not create an ADR for routine catalog edits.
 - Keep generated or external workflow side effects out of scope unless a human explicitly approves them.
+- For reviews, use the Code Review Pyramid in `agents/checklists/code-review-pyramid.md`: prioritize API/contract semantics and implementation behavior first, then docs and validation, and leave style/formatting to automation where possible.
 
 ## Safe Edit Boundaries
 
@@ -37,6 +38,8 @@ Use the lightest checks that prove the touched surface:
   use the local Codex `quick_validate.py` script for changed skills when available.
 - Manual consistency pass:
   verify that new required fields are documented, represented in Backstage descriptors, populated in demo entities, and covered by scorecard/check mapping when relevant.
+- Review-priority pass:
+  apply `agents/checklists/code-review-pyramid.md` so review feedback leads with API/contract risks, semantic correctness, documentation drift, and validation gaps before style nits.
 
 Wiki docs live in the `wiki` submodule. Before editing them, run `git -C wiki switch master` and `git -C wiki pull --ff-only`. Commit and push wiki changes inside `wiki`, then commit the updated submodule pointer in the main repository.
 

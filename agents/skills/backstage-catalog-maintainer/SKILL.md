@@ -9,10 +9,11 @@ description: Maintain and review Backstage catalog artifacts in the IDP IKS lab 
 
 1. Read `AGENTS.md` and the relevant files under `backstage/`, `examples/services/`, `.github/ISSUE_TEMPLATE/`, and `wiki/docs/`.
 2. Identify the catalog surface: entity, location, template, scorecard/check mapping, issue form, or service-local `catalog-info.yaml` file.
-3. Preserve stable entity names, refs, annotation names, and relation targets unless the user explicitly asks for a migration.
-4. When changing schema, annotations, or required metadata, update demo entities and affected docs in the same change.
-5. Keep MVP scope intact: no Kubernetes, runtime health, infrastructure provisioning, or autonomous production actions.
-6. Validate YAML and manually inspect cross-file relations before reporting completion.
+3. Apply `agents/checklists/code-review-pyramid.md`: review entity refs, annotations, catalog metadata shape, templates, issue forms, and workflow behavior as API/contract surfaces before style.
+4. Preserve stable entity names, refs, annotation names, and relation targets unless the user explicitly asks for a migration.
+5. When changing schema, annotations, or required metadata, update demo entities and affected docs in the same change.
+6. Keep MVP scope intact: no Kubernetes, runtime health, infrastructure provisioning, or autonomous production actions.
+7. Validate YAML and manually inspect cross-file relations before reporting completion.
 
 ## Reference Loading
 
@@ -22,4 +23,5 @@ description: Maintain and review Backstage catalog artifacts in the IDP IKS lab 
 
 - State the catalog behavior changed.
 - List validation performed.
-- Call out any ingestion, identifier, relation, Backstage template, or migration follow-up risk.
+- Lead with API/contract and semantic risks: ingestion, identifier, relation, Backstage template, issue form, workflow, or migration follow-up risk.
+- Keep style/readability suggestions lower priority unless they affect maintainability or user understanding.

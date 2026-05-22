@@ -2,6 +2,12 @@
 
 Use these checks after changing agent artifacts, Backstage catalog/configuration, issue forms, legacy Port references, or example catalog data.
 
+## Review Priority
+
+- Use `agents/checklists/code-review-pyramid.md` for code, catalog, docs, and agent-artifact reviews.
+- Lead with API/contract semantics and implementation behavior: Backstage entity refs, catalog metadata shape, workflow behavior, user-facing docs, and MVP scope boundaries.
+- Treat formatting, basic style, and simple syntax checks as automation-backed validation rather than the center of human review.
+
 ## YAML
 
 - Preferred local command: `yamllint backstage port examples agents .github/ISSUE_TEMPLATE`
