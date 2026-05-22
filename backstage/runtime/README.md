@@ -64,6 +64,8 @@ Use one of these local options:
 
 If your local directory layout differs, change the `catalog.locations[].target` path in your local-only config copy. Use an absolute path if needed, but do not commit machine-specific paths.
 
+Generated Backstage apps may include scaffolded `catalog.locations` in their own `app-config.yaml`. For this MVP smoke path, inspect the generated app config and remove or comment any scaffolded sample catalog locations if sample entities appear. The intended catalog source for this repository is only `../idp-iks-lab/backstage/catalog/locations.yaml`.
+
 ## Start Backstage
 
 From the generated app directory:
@@ -79,7 +81,7 @@ Expected local URLs:
 
 ## Verify catalog import
 
-Open the Software Catalog and confirm that Backstage reads entities from this repository rather than from hardcoded UI fixtures.
+Open the Software Catalog and confirm that Backstage reads entities from this repository rather than from hardcoded UI fixtures. Also confirm that generated Backstage sample entities are not mixed into the MVP catalog view. If sample entities appear, revisit the generated app's `catalog.locations` configuration.
 
 Expected demo entities:
 
@@ -99,6 +101,10 @@ Expected demo entities:
   - `service-onboarding`
 
 `reporting-api` intentionally lacks a runbook annotation/link so later advisory-check work can demonstrate an incomplete metadata case.
+
+This guide documents the local runtime path for #19. If a contributor does not run a generated Backstage app during review, record that as a validation fallback and leave full demo/runtime smoke validation to #24/#15.
+
+The #19 runtime path focuses on catalog import. The example config enables local TechDocs, but rendering TechDocs pages may require additional generated-app or local MkDocs/TechDocs prerequisites depending on the Backstage version. Treat full TechDocs/demo verification as #24/#15 scope unless explicitly smoke-tested here.
 
 ## Troubleshooting
 
