@@ -24,6 +24,8 @@ It intentionally does not import `./components.yaml`.
 
 The local runtime guide in `../runtime/README.md` shows how a generated Backstage app can load this root location.
 
+The issue #20 demo navigation for catalog views and filters is documented in `demo-views.md`.
+
 ## Entity shapes
 
 ### Location
@@ -113,6 +115,10 @@ Required MVP fields:
 - `spec.owner`
 - `spec.system`
 
+Recommended MVP field:
+
+- `metadata.tags` for portable default Backstage Catalog filtering/search. Tags should mirror selected IKS annotations for demo navigation, for example `iks`, `criticality-high`, or `criticality-medium`. The authoritative metadata remains in `metadata.annotations.iks.dev/*`.
+
 Optional/advisory MVP field:
 
 - `metadata.annotations.iks.dev/runbook-url`
@@ -124,6 +130,17 @@ Link guidance:
 - A missing runbook is schema-compatible but should appear as a catalog-quality gap.
 
 `customer-portal` is the complete demo service. `reporting-api` intentionally omits `iks.dev/runbook-url` and a runbook link to demonstrate advisory quality checks.
+
+## Demo view tags
+
+The MVP uses tags as a low-cost way to support default Backstage Catalog filtering without committing a generated app customization:
+
+- `iks`: service has `iks` in `iks.dev/compliance-scope`.
+- `criticality-high` / `criticality-critical`: service belongs in the critical-services demo view.
+- `criticality-medium` / `criticality-low`: service remains visible for comparison but should not appear in the critical-services view.
+- `data-personal` / `data-confidential`: optional data-class context for demo filtering.
+
+Keep tag values synchronized with the corresponding `iks.dev/*` annotations when service metadata changes.
 
 ## Port-to-Backstage migration mapping
 

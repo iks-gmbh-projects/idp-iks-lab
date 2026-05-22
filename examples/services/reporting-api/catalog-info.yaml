@@ -4,6 +4,10 @@ metadata:
   name: reporting-api
   title: Reporting API
   description: Demo service for management reporting data access.
+  tags:
+    - iks
+    - criticality-medium
+    - data-confidential
   annotations:
     backstage.io/source-location: url:https://github.com/example-org/reporting-api
     backstage.io/techdocs-ref: dir:./docs

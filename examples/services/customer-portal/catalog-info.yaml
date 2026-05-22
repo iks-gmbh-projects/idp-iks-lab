@@ -4,6 +4,10 @@ metadata:
   name: customer-portal
   title: Customer Portal
   description: Demo service for a customer-facing web portal.
+  tags:
+    - iks
+    - criticality-high
+    - data-personal
   annotations:
     backstage.io/source-location: url:https://github.com/example-org/customer-portal
     backstage.io/techdocs-ref: dir:./docs
