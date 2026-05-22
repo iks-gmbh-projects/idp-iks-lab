@@ -6,6 +6,7 @@ This directory contains reusable guidance for agentic development in the IDP IKS
 - `checklists/`: concise review checklists for common change types.
 - `skills/`: repo-versioned Codex skill sources. Mirror these into the local Codex skills directory when they should be discoverable by Codex.
 - `validation.md`: validation commands and manual fallback checks.
+- `checklists/code-review-pyramid.md`: review priority model for agent reviews; focus on API/contract semantics and implementation behavior before documentation, validation, and style.
 
 Backstage is the target platform for new catalog and workflow work. Port-specific artifacts are retained only for migration reference.
 

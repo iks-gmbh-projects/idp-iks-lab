@@ -11,8 +11,9 @@ description: Plan and review focused changes in the IDP IKS lab repository witho
 2. Keep the change small enough for a docs-and-configuration MVP unless the user asks for a larger expansion.
 3. Identify affected surfaces: wiki docs, wiki decisions, Backstage artifacts, legacy Port migration references, examples, agent artifacts, or GitHub workflow templates.
 4. Decide whether an ADR is needed. Use an ADR for scope, governance, source-of-truth, or integration decisions; skip it for routine maintenance.
-5. Define validation using `agents/validation.md`.
-6. Avoid adding runtime systems, Kubernetes behavior, or production automation unless the task explicitly changes the MVP scope.
+5. Use `agents/checklists/code-review-pyramid.md` to classify review risk: API/contract semantics first, then implementation behavior, documentation, validation, and style.
+6. Define validation using `agents/validation.md`.
+7. Avoid adding runtime systems, Kubernetes behavior, or production automation unless the task explicitly changes the MVP scope.
 
 ## Reference Loading
 
