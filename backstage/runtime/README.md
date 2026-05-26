@@ -124,7 +124,8 @@ Backstage generator output can vary by version. If `yarn dev` or config flags di
 
 ## Follow-up stories
 
-- #20: Configure catalog views and filters.
+Catalog view/filter guidance from #20 is complete under `backstage/catalog/demo-views.md`. Remaining follow-up stories are:
+
 - #21: Implement advisory catalog quality and IKS checks.
 - #22: Replace legacy Port actions with Software Templates and GitHub issue workflows.
 - #24: Package and document the local/demo runtime path.
