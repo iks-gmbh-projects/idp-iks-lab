@@ -24,6 +24,18 @@ The examples below assume this sibling-directory layout:
 
 ## Create the local app
 
+The repository includes a convenience startup script that creates the sibling runtime on first use, copies the local catalog config when needed, and starts Backstage:
+
+```bash
+./scripts/start-backstage.sh
+```
+
+IntelliJ users can run the shared `Start Backstage` run configuration, which calls the same script from the repository root.
+
+The first run requires network access for `npx @backstage/create-app@latest` and dependency installation. The generated app stays outside this repository at `../iks-backstage-runtime`.
+
+### Manual setup
+
 From the parent directory of this repository, generate a Backstage app as a sibling directory:
 
 ```bash
@@ -68,7 +80,13 @@ Generated Backstage apps may include scaffolded `catalog.locations` in their own
 
 ## Start Backstage
 
-From the generated app directory:
+Use the repository startup script:
+
+```bash
+./scripts/start-backstage.sh
+```
+
+Or, from the generated app directory:
 
 ```bash
 yarn dev
