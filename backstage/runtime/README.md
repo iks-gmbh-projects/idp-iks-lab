@@ -32,7 +32,9 @@ The repository includes a convenience startup script that creates the sibling ru
 
 IntelliJ users can run the shared `Start Backstage` run configuration, which calls the same script from the repository root.
 
-The first run requires network access for `npx @backstage/create-app@latest` and dependency installation. The generated app stays outside this repository at `../iks-backstage-runtime`.
+The first run requires network access for `npx @backstage/create-app@latest` and dependency installation. The script prefers the sibling runtime `../iks-backstage-runtime`; if the parent directory is not writable, it falls back to `${XDG_CACHE_HOME:-$HOME/.cache}/idp-iks-lab/iks-backstage-runtime`. Set `IKS_BACKSTAGE_RUNTIME_DIR` to choose another writable runtime directory.
+
+The script answers the Backstage app-name prompt with `iks-idp` by default. Set `IKS_BACKSTAGE_APP_NAME` before running the script if you need a different generated app name.
 
 ### Manual setup
 
@@ -74,7 +76,7 @@ Use one of these local options:
    yarn dev --config app-config.yaml --config ../idp-iks-lab/backstage/app-config.local.example.yaml
    ```
 
-If your local directory layout differs, change the `catalog.locations[].target` path in your local-only config copy. Use an absolute path if needed, but do not commit machine-specific paths.
+If your local directory layout differs, change the `catalog.locations[].target` path in your local-only config copy. The startup script writes an absolute target into its generated local config so cache-based runtimes still point back to this repository. Do not commit machine-specific absolute paths.
 
 Generated Backstage apps may include scaffolded `catalog.locations` in their own `app-config.yaml`. For this MVP smoke path, inspect the generated app config and remove or comment any scaffolded sample catalog locations if sample entities appear. The intended catalog source for this repository is only `../idp-iks-lab/backstage/catalog/locations.yaml`.
 
