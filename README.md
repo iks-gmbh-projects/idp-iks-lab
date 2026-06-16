@@ -108,5 +108,8 @@ Wiki-Aenderungen brauchen zwei Commits: zuerst im `wiki`-Submodul committen und 
 2. Demo-Ablauf gemaess `backstage/runtime/DEMO_CHECKLIST.md` pruefen.
 3. Scorecard-Report lokal testen: `python3 backstage/scorecards/check_catalog_scorecards.py --assert-demo-fixtures`
 4. (Optional) TechDocs-Rendering fuer Beispielservices pruefen.
-5. Templates oder GitHub Issue Forms fuer Review- und Katalogpflege-Workflows testen (tracked by #22).
+5. Software Templates fuer Review- und Katalogpflege-Workflows testen:
+   - GitHub-Token gemaess `backstage/runtime/GITHUB_INTEGRATION.md` konfigurieren
+   - Software Templates im Backstage "Create..."-Menü ausfuehren
+   - GitHub-Issues aus Backstage heraus erzeugen und verifizieren
 6. End-to-end Demo gemaess `wiki/docs/demo-story.md` validieren (tracked by #15).
