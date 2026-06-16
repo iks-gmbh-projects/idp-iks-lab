@@ -17,31 +17,31 @@ groups:
         description: Service has a technical owner group responsible for maintenance.
         field: spec.owner
         evaluation: present and non-empty
-        
+
       - id: has-system
         title: System is assigned
         description: Service is assigned to a logical system or domain.
         field: spec.system
         evaluation: present and non-empty
-        
+
       - id: has-repository
         title: Repository is linked
         description: Service links to its source code repository.
         field: metadata.annotations.backstage.io/source-location
         evaluation: present and non-empty
-        
+
       - id: has-lifecycle
         title: Lifecycle is classified
         description: Service lifecycle stage is documented (e.g., experimental, production, deprecated).
         field: spec.lifecycle
         evaluation: present and non-empty
-        
+
       - id: has-documentation
         title: Documentation link is present
         description: Service has technical documentation via annotation or link.
         field: metadata.annotations.backstage.io/techdocs-ref or metadata.links[] with title matching 'documentation' or 'docs'
         evaluation: annotation present or documentation/docs link exists
-        
+
       - id: has-runbook
         title: Runbook link is present
         description: Service has an operational runbook for incident response.
@@ -57,25 +57,25 @@ groups:
         description: Service has a business owner or product owner assigned.
         field: metadata.annotations.iks.dev/business-owner
         evaluation: present and non-empty
-        
+
       - id: has-criticality
         title: Criticality is classified
         description: Service criticality level is documented (e.g., low, medium, high, critical).
         field: metadata.annotations.iks.dev/criticality
         evaluation: present and non-empty
-        
+
       - id: has-protection-need
         title: Protection need is classified
         description: Service protection need is documented (e.g., normal, high, very-high).
         field: metadata.annotations.iks.dev/protection-need
         evaluation: present and non-empty
-        
+
       - id: has-data-class
         title: Data class is classified
         description: Service data classification is documented (e.g., public, internal, confidential, personal-data).
         field: metadata.annotations.iks.dev/data-class
         evaluation: present and non-empty
-        
+
       - id: has-iks-scope
         title: IKS scope is declared
         description: Service declares IKS compliance scope.
