@@ -104,10 +104,9 @@ Wiki-Aenderungen brauchen zwei Commits: zuerst im `wiki`-Submodul committen und 
 
 ## Naechste Schritte
 
-1. Lokale Backstage-Runtime gemaess `backstage/runtime/README.md` erzeugen oder vorhandene Instanz verwenden.
-2. `backstage/catalog/locations.yaml` als Catalog-Location anbinden.
-3. Demo-Entities und Service-nahe `catalog-info.yaml` Dateien importieren.
-4. TechDocs fuer die Beispielservices pruefen.
-5. Scorecard-/Tech-Insights-Ansatz fuer Katalogqualitaet und IKS-Basisdaten entscheiden.
-6. Templates oder GitHub Issue Forms fuer Review- und Katalogpflege-Workflows testen.
-7. Catalog-Views gemaess `backstage/catalog/demo-views.md` und Demo-Ablauf aus `wiki/docs/demo-story.md` end-to-end pruefen.
+1. Lokale Backstage-Runtime gemaess `backstage/runtime/README.md` starten: `./scripts/start-backstage.sh`
+2. Demo-Ablauf gemaess `backstage/runtime/DEMO_CHECKLIST.md` pruefen.
+3. Scorecard-Report lokal testen: `python3 backstage/scorecards/check_catalog_scorecards.py --assert-demo-fixtures`
+4. (Optional) TechDocs-Rendering fuer Beispielservices pruefen.
+5. Templates oder GitHub Issue Forms fuer Review- und Katalogpflege-Workflows testen (tracked by #22).
+6. End-to-end Demo gemaess `wiki/docs/demo-story.md` validieren (tracked by #15).
