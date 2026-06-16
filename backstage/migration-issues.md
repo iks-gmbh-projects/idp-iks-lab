@@ -4,21 +4,19 @@ Use this list to track the cleaned Backstage migration queue. The repository iss
 
 ## Open Backstage migration issues
 
-1. [#21 `Backstage IDP MVP: Implement advisory catalog quality and IKS checks`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/21)
-   - Scope: Tech Insights, a scorecard plugin, or local/CI report mapped from `backstage/scorecards/README.md`.
-   - Acceptance: every previous rule has a Backstage-compatible field, annotation, or explicit deferred reason.
-2. [#22 `Backstage IDP MVP: Replace Port actions with Software Templates and GitHub issue workflows`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/22)
+1. [#22 `Backstage IDP MVP: Replace Port actions with Software Templates and GitHub issue workflows`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/22)
    - Scope: Backstage Software Templates and active GitHub Issue Forms.
    - Acceptance: workflows create advisory GitHub-tracked tasks only.
-3. [#24 `Backstage IDP MVP: Package and document local/demo runtime`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/24)
+2. [#24 `Backstage IDP MVP: Package and document local/demo runtime`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/24)
    - Scope: local/demo runtime documentation, demo data loading, secrets documentation, and fallback story.
    - Acceptance: a contributor can run or understand the local Backstage demo path from a clean checkout.
-4. [#15 `Backstage IDP MVP: Run validation and complete demo dry-run`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/15)
+3. [#15 `Backstage IDP MVP: Run validation and complete demo dry-run`](https://github.com/iks-gmbh-projects/idp-iks-lab/issues/15)
    - Scope: YAML validation and manual demo consistency pass.
    - Acceptance: demo can be completed without production system changes.
 
 ## Completed Backstage migration issues
 
+- #21 `Backstage IDP MVP: Implement advisory catalog quality and IKS checks` is closed as completed. PR #34 added executable check definitions, a Python report generator, and CI integration under `backstage/scorecards/`. The MVP implementation uses local/CI Markdown reports; future Backstage Tech Insights or scorecard plugin integration remains optional.
 - #18 `Backstage IDP MVP: Finalize catalog schema and GitHub source-of-truth format` is closed as completed. Its catalog-schema scope remains represented by the current Backstage catalog descriptors and demo service `catalog-info.yaml` files.
 - #17 `Backstage IDP MVP: Architecture decision and migration anchor` is closed as completed. ADR 0003, ADR 0001 supersession, and the decision history point to Backstage as the target.
 - #19 `Backstage IDP MVP: Scaffold local Backstage app/runtime` is closed as completed. The external generated-runtime setup is documented under `backstage/runtime/`; full demo smoke validation remains tracked by #24/#15 unless performed earlier.

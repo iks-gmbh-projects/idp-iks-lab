@@ -14,6 +14,7 @@ Vorhanden im Repository:
 - Zwei Demo-Services: `customer-portal` als weitgehend vollstaendiges Beispiel und `reporting-api` mit bewusst fehlendem Runbook-Link.
 - GitHub-Issue-Forms fuer Katalogpflege und IKS-Reviews.
 - Aktive GitHub-Actions-Validierung fuer YAML-Dateien in `backstage`, `port`, `examples`, `agents` und `.github/ISSUE_TEMPLATE`.
+- Advisory Catalog Quality und IKS Checks mit lokalem/CI Markdown-Report unter `backstage/scorecards/`.
 - Dokumentierter lokaler Backstage-MVP-Pfad unter `backstage/runtime/`, der eine extern generierte Runtime auf diesen Repository-Katalog zeigt.
 - Wiki-Dokumentation als Submodul unter `wiki/`.
 - Agenten-Artefakte unter `agents/` mit Prompts, Checklisten und repo-versionierten Skills.
@@ -23,7 +24,7 @@ Noch offen fuer den MVP-Betrieb:
 - Lokalen Backstage-MVP ueber die dokumentierte externe Runtime unter `backstage/runtime/` starten und validieren.
 - Spaeter entscheiden, ob eine lauffaehige Backstage-App dauerhaft in dieses Repository aufgenommen wird oder extern bleibt.
 - Catalog-Views und Demo-Navigation gemaess `backstage/catalog/demo-views.md` pruefen.
-- Scorecard-Ansatz finalisieren: Tech Insights, Scorecard-Plugin oder GitHub-basierter Report.
+- ✅ ~~Scorecard-Ansatz finalisieren~~ → Abgeschlossen in #21 mit lokalem/CI Markdown-Report.
 - Backstage-Templates fuer GitHub-Issue-Erzeugung mit echten Zugangsdaten testen.
 - Demo end-to-end trocken laufen lassen.
 
