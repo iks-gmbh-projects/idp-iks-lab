@@ -12,6 +12,6 @@ GitHub remains the versioned source of truth. Backstage should read catalog loca
 - `runtime/`: instructions for generating a local Backstage app outside this repository and pointing it at this repository's catalog data.
 - `templates/`: advisory Software Template definitions for GitHub-tracked workflows.
 - `techdocs/`: example TechDocs configuration.
-- `scorecards/`: mapping from the previous scorecard concepts to a Backstage-compatible approach.
+- `scorecards/`: advisory catalog quality and IKS checks with local/CI Markdown report generation. Completed in #21.
 
 The `port/` directory is retained only as migration reference from the initial experiment.

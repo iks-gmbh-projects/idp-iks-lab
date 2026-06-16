@@ -14,6 +14,7 @@ Vorhanden im Repository:
 - Zwei Demo-Services: `customer-portal` als weitgehend vollstaendiges Beispiel und `reporting-api` mit bewusst fehlendem Runbook-Link.
 - GitHub-Issue-Forms fuer Katalogpflege und IKS-Reviews.
 - Aktive GitHub-Actions-Validierung fuer YAML-Dateien in `backstage`, `port`, `examples`, `agents` und `.github/ISSUE_TEMPLATE`.
+- Advisory Catalog Quality und IKS Checks mit lokalem/CI Markdown-Report unter `backstage/scorecards/`.
 - Dokumentierter lokaler Backstage-MVP-Pfad unter `backstage/runtime/`, der eine extern generierte Runtime auf diesen Repository-Katalog zeigt.
 - Wiki-Dokumentation als Submodul unter `wiki/`.
 - Agenten-Artefakte unter `agents/` mit Prompts, Checklisten und repo-versionierten Skills.
@@ -23,7 +24,7 @@ Noch offen fuer den MVP-Betrieb:
 - Lokalen Backstage-MVP ueber die dokumentierte externe Runtime unter `backstage/runtime/` starten und validieren.
 - Spaeter entscheiden, ob eine lauffaehige Backstage-App dauerhaft in dieses Repository aufgenommen wird oder extern bleibt.
 - Catalog-Views und Demo-Navigation gemaess `backstage/catalog/demo-views.md` pruefen.
-- Scorecard-Ansatz finalisieren: Tech Insights, Scorecard-Plugin oder GitHub-basierter Report.
+- ✅ ~~Scorecard-Ansatz finalisieren~~ → Abgeschlossen in #21 mit lokalem/CI Markdown-Report.
 - Backstage-Templates fuer GitHub-Issue-Erzeugung mit echten Zugangsdaten testen.
 - Demo end-to-end trocken laufen lassen.
 
@@ -103,10 +104,9 @@ Wiki-Aenderungen brauchen zwei Commits: zuerst im `wiki`-Submodul committen und 
 
 ## Naechste Schritte
 
-1. Lokale Backstage-Runtime gemaess `backstage/runtime/README.md` erzeugen oder vorhandene Instanz verwenden.
-2. `backstage/catalog/locations.yaml` als Catalog-Location anbinden.
-3. Demo-Entities und Service-nahe `catalog-info.yaml` Dateien importieren.
-4. TechDocs fuer die Beispielservices pruefen.
-5. Scorecard-/Tech-Insights-Ansatz fuer Katalogqualitaet und IKS-Basisdaten entscheiden.
-6. Templates oder GitHub Issue Forms fuer Review- und Katalogpflege-Workflows testen.
-7. Catalog-Views gemaess `backstage/catalog/demo-views.md` und Demo-Ablauf aus `wiki/docs/demo-story.md` end-to-end pruefen.
+1. Lokale Backstage-Runtime gemaess `backstage/runtime/README.md` starten: `./scripts/start-backstage.sh`
+2. Demo-Ablauf gemaess `backstage/runtime/DEMO_CHECKLIST.md` pruefen.
+3. Scorecard-Report lokal testen: `python3 backstage/scorecards/check_catalog_scorecards.py --assert-demo-fixtures`
+4. (Optional) TechDocs-Rendering fuer Beispielservices pruefen.
+5. Templates oder GitHub Issue Forms fuer Review- und Katalogpflege-Workflows testen (tracked by #22).
+6. End-to-end Demo gemaess `wiki/docs/demo-story.md` validieren (tracked by #15).
