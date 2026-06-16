@@ -12,7 +12,7 @@ spec:
   owner: group:default/platform-team
   type: service
   parameters:
-    - title: Request details
+    - title: Catalog Metadata Fix Request
       required:
         - componentRef
         - reason
@@ -21,22 +21,67 @@ spec:
           title: Backstage component reference
           type: string
           description: "Example: component:default/customer-portal"
+          ui:placeholder: "component:default/customer-portal"
+        
         reason:
-          title: Reason or missing metadata
+          title: Missing or incorrect metadata
           type: string
+          enum:
+            - Technical owner
+            - Business owner
+            - System
+            - Repository
+            - Lifecycle
+            - Documentation
+            - Runbook
+            - Criticality
+            - Protection need
+            - Data class
+            - Compliance scope
+          ui:widget: select
+        
         details:
-          title: Additional details
+          title: Details and context
           type: string
-          description: Context, scorecard result, or requested follow-up.
+          ui:widget: textarea
+          ui:options:
+            rows: 5
+          description: Add scorecard/check evidence, expected value, and validation steps.
+  
   steps:
-    - id: prepare-issue
-      name: Prepare GitHub issue
-      action: debug:log
+    - id: create-github-issue
+      name: Create GitHub Issue for Catalog Metadata
+      action: github:issues:create
       input:
-        message: >-
-          Prepare a GitHub issue for ${{ parameters.componentRef }}: ${{ parameters.reason }}.
-          This MVP template is advisory and does not mutate production systems.
+        repoUrl: github.com?repo=idp-iks-lab&owner=iks-gmbh-projects
+        title: "Catalog metadata: ${{ parameters.componentRef }}"
+        body: |
+          ## Backstage Component Reference
+          ${{ parameters.componentRef }}
+
+          ## Missing or Incorrect Metadata
+          ${{ parameters.reason }}
+
+          ## Details and Context
+          ${{ parameters.details }}
+
+          ---
+          *This issue was created via Backstage Software Template*
+          *Template: `catalog-metadata-fix`*
+        labels:
+          - catalog
+          - metadata
+
   output:
+    links:
+      - title: View GitHub Issue
+        url: ${{ steps['create-github-issue'].output.issueUrl }}
     text:
-      - title: Follow-up
-        content: Use the matching GitHub Issue Form to create the tracked task.
+      - title: Issue Created
+        content: |
+          GitHub issue created successfully!
+
+          **Issue URL:** ${{ steps['create-github-issue'].output.issueUrl }}
+          **Issue Number:** #${{ steps['create-github-issue'].output.issueNumber }}
+
+          The issue has been tracked in the repository for follow-up.

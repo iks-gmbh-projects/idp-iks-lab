@@ -3,7 +3,11 @@ kind: Template
 metadata:
   name: service-onboarding
   title: Service Onboarding Checklist
-  description: Create an advisory checklist for completing Backstage catalog, TechDocs, and IKS metadata.
+  description: |
+    Create an advisory checklist for completing Backstage catalog, TechDocs, and IKS metadata.
+    
+    NOTE: This template is advisory-only in the MVP. Use the GitHub Issue Forms directly
+    or create a matching issue form for automation (tracked separately).
   tags:
     - iks
     - github
