@@ -22,7 +22,7 @@ spec:
           type: string
           description: "Example: component:default/customer-portal"
           ui:placeholder: "component:default/customer-portal"
-        
+
         reason:
           title: Review reason
           type: string
@@ -30,7 +30,7 @@ spec:
           ui:options:
             rows: 3
           description: Why is the IKS review required?
-        
+
         fieldsToReview:
           title: Zu pruefende Angaben
           type: array
@@ -46,7 +46,7 @@ spec:
               - Runbook
           uniqueItems: true
           ui:widget: checkboxes
-        
+
         requestedDecision:
           title: Gewuenschte Entscheidung
           type: string

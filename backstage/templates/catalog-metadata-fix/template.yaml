@@ -22,7 +22,7 @@ spec:
           type: string
           description: "Example: component:default/customer-portal"
           ui:placeholder: "component:default/customer-portal"
-        
+
         reason:
           title: Missing or incorrect metadata
           type: string
@@ -39,7 +39,7 @@ spec:
             - Data class
             - Compliance scope
           ui:widget: select
-        
+
         details:
           title: Details and context
           type: string
@@ -47,7 +47,7 @@ spec:
           ui:options:
             rows: 5
           description: Add scorecard/check evidence, expected value, and validation steps.
-  
+
   steps:
     - id: create-github-issue
       name: Create GitHub Issue for Catalog Metadata
