@@ -21,3 +21,21 @@ jobs:
             rules:
               document-start: disable
               line-length: disable
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PyYAML
+        run: python3 -m pip install PyYAML
+
+      - name: Generate advisory catalog scorecard report
+        run: |
+          python3 backstage/scorecards/check_catalog_scorecards.py \
+            --catalog-root backstage/catalog/locations.yaml \
+            --checks backstage/scorecards/checks.yaml \
+            --output catalog-scorecard-report.md
+
+          echo "## Catalog Quality and IKS Checks" >> $GITHUB_STEP_SUMMARY
+          cat catalog-scorecard-report.md >> $GITHUB_STEP_SUMMARY
