@@ -91,13 +91,49 @@ Use the repository startup script:
 Or, from the generated app directory:
 
 ```bash
-yarn dev
+yarn start
 ```
 
 Expected local URLs:
 
 - Frontend: `http://localhost:3000`
 - Backend: `http://localhost:7007`
+
+## Start Backstage in Docker
+
+Use the Docker wrapper when you want to run the generated Backstage app in a
+local container instead of running Yarn directly on the host:
+
+```bash
+./scripts/start-backstage-docker.sh
+```
+
+To start the same wrapper in the background:
+
+```bash
+IKS_BACKSTAGE_DETACH=1 ./scripts/start-backstage-docker.sh
+```
+
+Stop the Docker runtime with:
+
+```bash
+./scripts/start-backstage-docker.sh down
+```
+
+The wrapper keeps the same repository boundary as the host startup path:
+
+- The generated Backstage app stays outside this repository, normally at
+  `../iks-backstage-runtime`.
+- This repository is mounted read-only into the container so Backstage imports
+  `backstage/catalog/locations.yaml` from the versioned repo.
+- A generated `app-config.docker.local.yaml` is written into the local runtime
+  directory with container paths. Do not commit that generated file.
+
+The first Docker run builds a small local Node image and runs
+`yarn install --immutable` in the generated Backstage runtime. This can take
+several minutes. Set `GITHUB_TOKEN` in your shell before starting the wrapper if
+you want GitHub-backed template actions to use a token; basic catalog viewing
+does not require one.
 
 ## Verify catalog import
 
