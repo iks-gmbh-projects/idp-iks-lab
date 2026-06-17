@@ -412,7 +412,7 @@ Catalog consistency validation:
 
 Plan artifact created by this planning turn:
 
-- `.hermes/plans/2026-05-21_130717-issue-18-backstage-catalog-schema.md`
+- `agents/archive/hermes/plans/2026-05-21_130717-issue-18-backstage-catalog-schema.md`
   - Purpose: implementation plan for issue #18.
   - Status: local plan file written in plan mode.
   - Tracking/commit status: not committed by this plan-mode turn unless a later execution step explicitly stages and commits it.
@@ -424,7 +424,7 @@ External tracker referenced:
   - Status observed during planning: open.
   - Mutation status: no issue comment, edit, assignment, label, close, PR, or other tracker mutation performed in plan mode.
 
-No companion snapshot under `.hermes/tmp/` is required for #18 unless a later implementation wants to capture a before/after schema inventory.
+No companion snapshot under `agents/archive/hermes/tmp/` is required for #18 unless a later implementation wants to capture a before/after schema inventory.
 
 ## Deferred Actions Because This Was Plan Mode
 

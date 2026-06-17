@@ -502,7 +502,7 @@ If no runtime smoke test is performed in #19, document that as a fallback and le
 
 ## Artifact Inventory / Traceability
 
-- Plan file: `.hermes/plans/2026-05-22_084247-issue-19-local-backstage-runtime.md`
+- Plan file: `agents/archive/hermes/plans/2026-05-22_084247-issue-19-local-backstage-runtime.md`
   - Created in plan mode.
   - Should be committed later only if the user asks to track/commit the plan.
 - External tracker item: GitHub issue #19

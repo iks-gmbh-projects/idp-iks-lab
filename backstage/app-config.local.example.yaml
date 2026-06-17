@@ -21,6 +21,14 @@ backend:
 organization:
   name: IKS
 
+# GitHub integration for Software Templates
+# See backstage/runtime/GITHUB_INTEGRATION.md for setup instructions
+integrations:
+  github:
+    - host: github.com
+      # Use environment variable for token (never commit real tokens)
+      token: ${GITHUB_TOKEN}
+
 catalog:
   locations:
     - type: file

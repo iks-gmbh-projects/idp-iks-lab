@@ -21,8 +21,6 @@ Issue: https://github.com/iks-gmbh-projects/idp-iks-lab/issues/1
   - Per-service examples: `examples/services/customer-portal/catalog.yaml`, `examples/services/reporting-api/catalog.yaml`
   - Wiki docs: `wiki/docs/iks-metadata-model.md`, `wiki/docs/demo-story.md`
 - Current working tree has unrelated uncommitted changes:
-  - `.devcontainer/Dockerfile`
-  - `.devcontainer/devcontainer.json`
   - `package-lock.json`
   These should not be touched unless the user explicitly includes them.
 - The wiki is a submodule. Before editing wiki docs, follow `AGENTS.md`: run `git -C wiki switch master` and `git -C wiki pull --ff-only`. Because this is a plan only, do not run those mutating commands now.
@@ -157,7 +155,7 @@ The likely implementation is to tighten and document the current service catalog
 
 10. Review final diff and issue coverage
    - Run `git diff -- port examples wiki`.
-   - Confirm no `.devcontainer/*` or `package-lock.json` edits are included.
+   - Confirm no `package-lock.json` edits are included.
    - Prepare a summary mapped to issue #1 acceptance criteria.
    - If making a PR later, include `Closes #1` or `Resolves #1` in the PR body only after implementation is complete and verified.
 
@@ -180,8 +178,6 @@ Possible, only if consistency requires it:
 - `wiki/Home.md` or `wiki/_Sidebar.md` if a new wiki page is added
 
 Should not change for this issue:
-- `.devcontainer/Dockerfile`
-- `.devcontainer/devcontainer.json`
 - `package-lock.json`
 - Runtime/deployment/Kubernetes files, unless a human explicitly expands the scope
 

@@ -1,0 +1,37 @@
+services:
+  backstage:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    image: idp-iks-lab/backstage-local:latest
+    init: true
+    working_dir: /workspace/iks-backstage-runtime
+    environment:
+      NODE_ENV: development
+      HOST: 0.0.0.0
+      CHOKIDAR_USEPOLLING: "true"
+      WATCHPACK_POLLING: "true"
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+      IKS_BACKSTAGE_START_SCRIPT: ${IKS_BACKSTAGE_START_SCRIPT:-start}
+    ports:
+      - "3000:3000"
+      - "7007:7007"
+    volumes:
+      - type: bind
+        source: ${IKS_BACKSTAGE_RUNTIME_DIR:?Set IKS_BACKSTAGE_RUNTIME_DIR}
+        target: /workspace/iks-backstage-runtime
+      - type: bind
+        source: ${IKS_BACKSTAGE_REPO_ROOT:?Set IKS_BACKSTAGE_REPO_ROOT}
+        target: /workspace/idp-iks-lab
+        read_only: true
+      - backstage-yarn-cache:/home/node/.cache/yarn
+    command:
+      - bash
+      - -lc
+      - |
+        corepack enable
+        yarn install --immutable
+        yarn "${IKS_BACKSTAGE_START_SCRIPT:-start}" --config /workspace/iks-backstage-runtime/app-config.yaml --config /workspace/iks-backstage-runtime/app-config.docker.local.yaml
+
+volumes:
+  backstage-yarn-cache:

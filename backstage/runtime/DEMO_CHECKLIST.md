@@ -11,7 +11,7 @@ Use this checklist to verify the local Backstage demo path works end-to-end.
 
 ## Local Runtime Setup
 
-- [ ] Run `./scripts/start-backstage.sh` or follow `backstage/runtime/README.md` manual steps
+- [ ] Run `./scripts/start-backstage-docker.sh` or follow `backstage/runtime/README.md` manual steps
 - [ ] Backstage frontend accessible at `http://localhost:3000`
 - [ ] Backstage backend accessible at `http://localhost:7007`
 
@@ -74,15 +74,51 @@ CI verification:
 - [ ] GitHub Actions workflow runs scorecard report on PR/push
 - [ ] Report appears in GitHub Actions step summary
 
-## GitHub Issue Workflow (Fallback for MVP)
+## Software Template GitHub Integration (issue #22)
 
-The MVP Software Templates are advisory-only and use `debug:log` actions. The active workflow path uses GitHub Issue Forms:
+Prerequisites:
+- [ ] GitHub Personal Access Token created with `repo` scope
+- [ ] `GITHUB_TOKEN` environment variable set (see `backstage/runtime/GITHUB_INTEGRATION.md`)
+- [ ] Backstage restarted to pick up token
 
+Testing catalog-metadata-fix template:
+- [ ] Navigate to "Create..." in Backstage
+- [ ] Select "Catalog Metadata Fix" template
+- [ ] Fill in parameters:
+  - Component ref: `component:default/reporting-api`
+  - Reason: `Runbook`
+  - Details: `Missing runbook annotation - detected by scorecard check`
+- [ ] Execute template
+- [ ] Verify success message with issue URL
+- [ ] Click issue URL and verify GitHub issue created
+- [ ] Verify issue title: "Catalog metadata: component:default/reporting-api"
+- [ ] Verify issue labels: `catalog`, `metadata`
+- [ ] Verify issue body includes component ref, reason, details
+
+Testing iks-review-request template:
+- [ ] Navigate to "Create..." in Backstage
+- [ ] Select "IKS Review Request" template
+- [ ] Fill in parameters:
+  - Component ref: `component:default/customer-portal`
+  - Reason: `Pre-production IKS compliance review`
+  - Fields to review: (check relevant items)
+  - Requested decision: (select one)
+- [ ] Execute template
+- [ ] Verify success message with issue URL
+- [ ] Click issue URL and verify GitHub issue created
+- [ ] Verify issue title: "IKS review: component:default/customer-portal"
+- [ ] Verify issue labels: `iks`, `review`
+- [ ] Verify issue body includes all parameters
+
+Fallback testing (without GitHub token):
+- [ ] Templates still load in Backstage catalog
+- [ ] Template execution shows clear error about missing credentials
+- [ ] Error message points to `backstage/runtime/GITHUB_INTEGRATION.md`
+
+GitHub Issue Forms (alternative workflow):
 - [ ] Navigate to `.github/ISSUE_TEMPLATE/catalog-metadata-fix.yml`
 - [ ] Verify issue form structure matches template parameters
 - [ ] (Optional) Create a test issue manually to verify form fields
-
-Full Software Template GitHub integration testing is tracked by issue #22.
 
 ## TechDocs (Optional for #24)
 
@@ -105,7 +141,7 @@ Full TechDocs rendering verification is optional for #24; defer to #15 if local 
 
 Document any gaps discovered:
 - TechDocs rendering setup steps if needed
-- Software Template GitHub integration (tracked by #22)
+- Service onboarding template GitHub integration (no matching issue form yet)
 - Production deployment story (explicitly out of MVP scope)
 - Custom Backstage UI columns/filters (optional, tracked separately if needed)
 

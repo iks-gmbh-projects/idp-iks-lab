@@ -360,7 +360,7 @@ Manual consistency pass:
 **Objective:** Create a reviewable commit that includes only issue #23 cleanup.
 
 **Files likely to stage:**
-- `.hermes/plans/2026-05-22_070638-issue-23-repository-consistency-cleanup.md`
+- `agents/archive/hermes/plans/2026-05-22_070638-issue-23-repository-consistency-cleanup.md`
 - `README.md`
 - `.github/workflows/validate-port-config.yml` deletion
 - `.github/workflows/validate-idp-config.yml` if synced/edited
@@ -374,7 +374,7 @@ Manual consistency pass:
 
 ```bash
 git status --short
-git add README.md .github/workflows github/workflows .github/ISSUE_TEMPLATE AGENTS.md agents backstage .hermes/plans/2026-05-22_070638-issue-23-repository-consistency-cleanup.md
+git add README.md .github/workflows github/workflows .github/ISSUE_TEMPLATE AGENTS.md agents backstage agents/archive/hermes/plans/2026-05-22_070638-issue-23-repository-consistency-cleanup.md
 # If wiki changed and was committed inside the submodule:
 git add wiki
 git diff --cached --stat
@@ -418,7 +418,7 @@ gh pr create --base main --head "$(git branch --show-current)" --title "docs: fi
 ## Files likely to change
 
 Likely required:
-- `.hermes/plans/2026-05-22_070638-issue-23-repository-consistency-cleanup.md`
+- `agents/archive/hermes/plans/2026-05-22_070638-issue-23-repository-consistency-cleanup.md`
 - `README.md`
 - `.github/workflows/validate-port-config.yml` deleted
 
@@ -485,7 +485,7 @@ Required manual validation:
 
 ## Artifact inventory / traceability
 
-- Plan file: `.hermes/plans/2026-05-22_070638-issue-23-repository-consistency-cleanup.md`
+- Plan file: `agents/archive/hermes/plans/2026-05-22_070638-issue-23-repository-consistency-cleanup.md`
   - Status: created by plan mode.
   - Intended to be committed with the issue #23 implementation branch if the user requests execution.
 - External issue: #23

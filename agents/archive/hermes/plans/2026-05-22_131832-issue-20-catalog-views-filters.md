@@ -511,7 +511,7 @@ Expected:
 
 **Files:**
 - Stage only intended files, likely:
-  - `.hermes/plans/2026-05-22_131832-issue-20-catalog-views-filters.md`
+  - `agents/archive/hermes/plans/2026-05-22_131832-issue-20-catalog-views-filters.md`
   - `examples/services/customer-portal/catalog-info.yaml`
   - `examples/services/reporting-api/catalog-info.yaml`
   - `backstage/catalog/demo-views.md`
@@ -525,7 +525,7 @@ Expected:
 
 ```bash
 git status --short
-git add .hermes/plans/2026-05-22_131832-issue-20-catalog-views-filters.md \
+git add agents/archive/hermes/plans/2026-05-22_131832-issue-20-catalog-views-filters.md \
   examples/services/customer-portal/catalog-info.yaml \
   examples/services/reporting-api/catalog-info.yaml \
   backstage/catalog/demo-views.md \
@@ -597,7 +597,7 @@ Expected:
 
 Expected:
 
-- `.hermes/plans/2026-05-22_131832-issue-20-catalog-views-filters.md`
+- `agents/archive/hermes/plans/2026-05-22_131832-issue-20-catalog-views-filters.md`
   - this plan; include in PR for traceability if user wants tracked plans.
 - `examples/services/customer-portal/catalog-info.yaml`
   - add `metadata.tags` for IKS/default demo filtering.
@@ -737,7 +737,7 @@ Expected:
 ## Artifact Inventory / Traceability
 
 - Plan file created in plan mode:
-  - `.hermes/plans/2026-05-22_131832-issue-20-catalog-views-filters.md`
+  - `agents/archive/hermes/plans/2026-05-22_131832-issue-20-catalog-views-filters.md`
   - local repository file only at creation time;
   - not committed or pushed in plan mode.
 - External issue referenced:

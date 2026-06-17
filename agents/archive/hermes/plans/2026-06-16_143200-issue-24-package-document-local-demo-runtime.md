@@ -340,7 +340,7 @@ Update "Naechste Schritte" section (lines 104-112):
 
 ### Planning Artifacts
 
-- `.hermes/plans/2026-06-16_143200-issue-24-package-document-local-demo-runtime.md` - this plan
+- `agents/archive/hermes/plans/2026-06-16_143200-issue-24-package-document-local-demo-runtime.md` - this plan
 
 ---
 
