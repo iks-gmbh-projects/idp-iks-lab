@@ -25,7 +25,7 @@ The MVP uses **Personal Access Token (PAT)** authentication for simplicity. Prod
 
 **Option A: Environment Variable (Recommended for local dev)**
 
-Add to your shell profile or Backstage startup script:
+Export the token before starting the Docker runtime:
 
 ```bash
 export GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -46,7 +46,7 @@ integrations:
 
 ### 3. Verify Integration
 
-1. Start Backstage: `./scripts/start-backstage.sh`
+1. Start Backstage: `./scripts/start-backstage-docker.sh`
 2. Navigate to "Create..." → "Catalog Metadata Fix"
 3. Fill in template parameters
 4. Execute template

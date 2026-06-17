@@ -11,9 +11,9 @@ This guide does not add production deployment, Kubernetes automation, production
 ## Prerequisites
 
 - A local clone of this repository.
-- Node.js LTS compatible with the current Backstage `create-app` requirements.
-- Yarn as required by the generated Backstage app.
-- Network access for the first Backstage app generation and dependency installation.
+- Docker with Docker Compose V2, or `docker-compose`.
+- Node.js/npm with `npx` available for the first Backstage app generation.
+- Network access for the first Backstage app generation, image build, and dependency installation.
 
 The examples below assume this sibling-directory layout:
 
@@ -22,91 +22,27 @@ The examples below assume this sibling-directory layout:
 <workspace>/iks-backstage-runtime
 ```
 
-## Create the local app
+## Start the local runtime
 
-The repository includes a convenience startup script that creates the sibling runtime on first use, copies the local catalog config when needed, and starts Backstage:
-
-```bash
-./scripts/start-backstage.sh
-```
-
-IntelliJ users can run the shared `Start Backstage` run configuration, which calls the same script from the repository root.
-
-The first run requires network access for `npx @backstage/create-app@latest` and dependency installation. The script prefers the sibling runtime `../iks-backstage-runtime`; if the parent directory is not writable, it falls back to `${XDG_CACHE_HOME:-$HOME/.cache}/idp-iks-lab/iks-backstage-runtime`. Set `IKS_BACKSTAGE_RUNTIME_DIR` to choose another writable runtime directory.
-
-The script answers the Backstage app-name prompt with `iks-idp` by default. Set `IKS_BACKSTAGE_APP_NAME` before running the script if you need a different generated app name.
-
-### Manual setup
-
-From the parent directory of this repository, generate a Backstage app as a sibling directory:
-
-```bash
-cd ..
-npx @backstage/create-app@latest --path iks-backstage-runtime
-cd iks-backstage-runtime
-```
-
-Keep the generated app outside `idp-iks-lab` for this MVP path. The generated app is local runtime scaffolding; this repository remains the versioned source of truth for catalog descriptors and example configuration.
-
-## Point the app at this repository catalog
-
-This repository provides a non-secret local runtime config example at:
-
-```text
-idp-iks-lab/backstage/app-config.local.example.yaml
-```
-
-The example config loads the root catalog location from:
-
-```text
-../idp-iks-lab/backstage/catalog/locations.yaml
-```
-
-Use one of these local options:
-
-1. Copy the example into the generated app as a local config file:
-
-   ```bash
-   cp ../idp-iks-lab/backstage/app-config.local.example.yaml app-config.local.yaml
-   ```
-
-2. Or pass the repository config file explicitly when starting the generated app, if the generated Backstage command supports your desired config flags:
-
-   ```bash
-   yarn dev --config app-config.yaml --config ../idp-iks-lab/backstage/app-config.local.example.yaml
-   ```
-
-If your local directory layout differs, change the `catalog.locations[].target` path in your local-only config copy. The startup script writes an absolute target into its generated local config so cache-based runtimes still point back to this repository. Do not commit machine-specific absolute paths.
-
-Generated Backstage apps may include scaffolded `catalog.locations` in their own `app-config.yaml`. For this MVP smoke path, inspect the generated app config and remove or comment any scaffolded sample catalog locations if sample entities appear. The intended catalog source for this repository is only `../idp-iks-lab/backstage/catalog/locations.yaml`.
-
-## Start Backstage
-
-Use the repository startup script:
-
-```bash
-./scripts/start-backstage.sh
-```
-
-Or, from the generated app directory:
-
-```bash
-yarn start
-```
-
-Expected local URLs:
-
-- Frontend: `http://localhost:3000`
-- Backend: `http://localhost:7007`
-
-## Start Backstage in Docker
-
-Use the Docker wrapper when you want to run the generated Backstage app in a
-local container instead of running Yarn directly on the host:
+The repository-supported startup path is the Docker wrapper. It creates the
+sibling Backstage runtime on first use, writes the Docker-local catalog config,
+and starts Backstage through Docker Compose:
 
 ```bash
 ./scripts/start-backstage-docker.sh
 ```
+
+IntelliJ users can run the shared `Start Backstage` run configuration, which
+calls the same script from the repository root.
+
+The first run requires network access for `npx @backstage/create-app@latest`,
+the local Docker image build, and dependency installation in the container. The
+script prefers the sibling runtime `../iks-backstage-runtime`; if the parent
+directory is not writable, it falls back to
+`${XDG_CACHE_HOME:-$HOME/.cache}/idp-iks-lab/iks-backstage-runtime`. Set
+`IKS_BACKSTAGE_RUNTIME_DIR` to choose another writable runtime directory.
+
+The script answers the Backstage app-name prompt with `iks-idp` by default. Set `IKS_BACKSTAGE_APP_NAME` before running the script if you need a different generated app name.
 
 To start the same wrapper in the background:
 
@@ -120,7 +56,7 @@ Stop the Docker runtime with:
 ./scripts/start-backstage-docker.sh down
 ```
 
-The wrapper keeps the same repository boundary as the host startup path:
+The wrapper keeps the repository boundary clear:
 
 - The generated Backstage app stays outside this repository, normally at
   `../iks-backstage-runtime`.
@@ -129,11 +65,57 @@ The wrapper keeps the same repository boundary as the host startup path:
 - A generated `app-config.docker.local.yaml` is written into the local runtime
   directory with container paths. Do not commit that generated file.
 
-The first Docker run builds a small local Node image and runs
-`yarn install --immutable` in the generated Backstage runtime. This can take
-several minutes. Set `GITHUB_TOKEN` in your shell before starting the wrapper if
-you want GitHub-backed template actions to use a token; basic catalog viewing
-does not require one.
+Set `GITHUB_TOKEN` in your shell before starting the wrapper if you want
+GitHub-backed template actions to use a token; basic catalog viewing does not
+require one.
+
+### Manual setup
+
+The Docker wrapper normally handles app generation. To pre-create the generated
+app yourself, run this from the parent directory of this repository:
+
+```bash
+cd ..
+npx @backstage/create-app@latest --path iks-backstage-runtime
+```
+
+Keep the generated app outside `idp-iks-lab` for this MVP path. The generated app is local runtime scaffolding; this repository remains the versioned source of truth for catalog descriptors and example configuration.
+
+## Point the app at this repository catalog
+
+The Docker wrapper writes a local-only `app-config.docker.local.yaml` into the
+generated runtime and mounts this repository at `/workspace/idp-iks-lab` inside
+the container.
+
+This repository also provides a non-secret local runtime config example at:
+
+```text
+idp-iks-lab/backstage/app-config.local.example.yaml
+```
+
+The example config loads the root catalog location from:
+
+```text
+../idp-iks-lab/backstage/catalog/locations.yaml
+```
+
+Use this example only for manual local experiments outside the Docker wrapper:
+
+```bash
+cp ../idp-iks-lab/backstage/app-config.local.example.yaml app-config.local.yaml
+```
+
+If your local directory layout differs, change the `catalog.locations[].target`
+path in your local-only config copy. The Docker wrapper writes a container path
+into its generated Docker config so cache-based runtimes still point back to
+this repository. Do not commit machine-specific absolute paths.
+
+Generated Backstage apps may include scaffolded `catalog.locations` in their own `app-config.yaml`. For this MVP smoke path, inspect the generated app config and remove or comment any scaffolded sample catalog locations if sample entities appear. The intended catalog source for this repository is only `../idp-iks-lab/backstage/catalog/locations.yaml`.
+
+Expected local URLs:
+
+- Frontend: `http://localhost:3000`
+- Backend: `http://localhost:7007`
 
 ## Verify catalog import
 
@@ -176,7 +158,12 @@ The intended MVP import root is `backstage/catalog/locations.yaml`. It imports s
 
 ### Generated app command differs
 
-Backstage generator output can vary by version. If `yarn dev` or config flags differ in your generated app, follow that generated app's README while preserving the same catalog target: this repository's `backstage/catalog/locations.yaml`.
+Backstage generator output can vary by version. The Docker wrapper detects
+whether the generated app exposes `dev` or `start` in `package.json` and passes
+the repository catalog config to that script. If your generated app needs a
+different script, set `IKS_BACKSTAGE_START_SCRIPT` before running the wrapper
+while preserving the same catalog target: this repository's
+`backstage/catalog/locations.yaml`.
 
 ## Follow-up stories
 

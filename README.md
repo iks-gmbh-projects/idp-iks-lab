@@ -104,7 +104,7 @@ Wiki-Aenderungen brauchen zwei Commits: zuerst im `wiki`-Submodul committen und 
 
 ## Naechste Schritte
 
-1. Lokale Backstage-Runtime gemaess `backstage/runtime/README.md` starten: `./scripts/start-backstage.sh`
+1. Lokale Backstage-Runtime gemaess `backstage/runtime/README.md` starten: `./scripts/start-backstage-docker.sh`
 2. Demo-Ablauf gemaess `backstage/runtime/DEMO_CHECKLIST.md` pruefen.
 3. Scorecard-Report lokal testen: `python3 backstage/scorecards/check_catalog_scorecards.py --assert-demo-fixtures`
 4. (Optional) TechDocs-Rendering fuer Beispielservices pruefen.

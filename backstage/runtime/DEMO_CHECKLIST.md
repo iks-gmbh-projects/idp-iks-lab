@@ -11,7 +11,7 @@ Use this checklist to verify the local Backstage demo path works end-to-end.
 
 ## Local Runtime Setup
 
-- [ ] Run `./scripts/start-backstage.sh` or follow `backstage/runtime/README.md` manual steps
+- [ ] Run `./scripts/start-backstage-docker.sh` or follow `backstage/runtime/README.md` manual steps
 - [ ] Backstage frontend accessible at `http://localhost:3000`
 - [ ] Backstage backend accessible at `http://localhost:7007`
 
