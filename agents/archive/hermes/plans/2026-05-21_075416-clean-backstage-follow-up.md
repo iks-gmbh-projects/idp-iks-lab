@@ -42,11 +42,11 @@
 
 **Files:**
 - Read: GitHub issues #8-#24 via `gh issue view`
-- Optional local note during execution: `.hermes/tmp/backstage-issue-cleanup-before.json` (do not commit unless requested)
+- Optional local note during execution: `agents/archive/hermes/tmp/backstage-issue-cleanup-before.json` (do not commit unless requested)
 
 **Steps:**
 1. Run a read-only issue export:
-   - `gh issue list --state open --limit 50 --json number,title,labels,body,url > .hermes/tmp/backstage-issue-cleanup-before.json`
+   - `gh issue list --state open --limit 50 --json number,title,labels,body,url > agents/archive/hermes/tmp/backstage-issue-cleanup-before.json`
 2. Review issue numbers #8-#24 and classify them as:
    - `keep/edit`: still relevant after Backstage decision.
    - `close/superseded`: Port runtime task replaced by Backstage task.

@@ -63,7 +63,7 @@ Noch offen fuer den MVP-Betrieb:
 - `backstage/`: Backstage-Zielstruktur fuer Catalog-Locations, Beispielkonfiguration, lokale Runtime-Hinweise, Templates, TechDocs und Scorecard-Mapping.
 - `examples/services/`: Beispiel-Services mit Doku und Backstage `catalog-info.yaml` Dateien.
 - `port/`: Legacy-Migrationsreferenz aus dem initialen Port-Experiment.
-- `agents/`: Agentenleitfaden, wiederverwendbare Prompts, Checklisten und Skills.
+- `agents/`: Agentenleitfaden, wiederverwendbare Prompts, Checklisten, Skills und Agenten-Archiv.
 
 ## Validierung
 

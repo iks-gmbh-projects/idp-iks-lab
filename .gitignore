@@ -8,6 +8,11 @@ Thumbs.db
 .env
 .env.*
 
+# Local coding-agent tool state
+.agents/
+.codex/
+.ai/
+
 # Dependency and build output
 node_modules/
 dist/

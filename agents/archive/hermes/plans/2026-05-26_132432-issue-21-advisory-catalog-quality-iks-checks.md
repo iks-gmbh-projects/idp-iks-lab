@@ -227,7 +227,7 @@ Expected implementation files:
 - `backstage/scorecards/check_catalog_scorecards.py`
 - `backstage/scorecards/README.md`
 - `.github/workflows/validate-idp-config.yml`
-- this plan file under `.hermes/plans/`
+- this plan file under `agents/archive/hermes/plans/`
 
 Possible documentation-only updates if stale wording remains:
 

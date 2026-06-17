@@ -587,7 +587,7 @@ python3 -c "import yaml; yaml.safe_load(open('backstage/templates/service-onboar
 - `README.md` - Updated next steps with token setup reference
 
 **Planning artifacts:**
-- `.hermes/plans/2026-06-16_150000-issue-22-software-templates-github-integration.md` - This plan
+- `agents/archive/hermes/plans/2026-06-16_150000-issue-22-software-templates-github-integration.md` - This plan
 
 ---
 
@@ -691,7 +691,7 @@ docs: add implementation plan for issue #22
 Part of #22
 ```
 
-Files: `.hermes/plans/2026-06-16_150000-issue-22-software-templates-github-integration.md`
+Files: `agents/archive/hermes/plans/2026-06-16_150000-issue-22-software-templates-github-integration.md`
 
 ---
 
