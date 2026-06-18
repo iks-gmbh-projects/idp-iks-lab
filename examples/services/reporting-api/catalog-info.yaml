@@ -1,4 +1,5 @@
-apiVersion: backstage.io/v1alpha1
+# yaml-language-server: $schema=https://json.schemastore.org/catalog-info.json
+apiVersion: backstage.io/v1beta1
 kind: Component
 metadata:
   name: reporting-api

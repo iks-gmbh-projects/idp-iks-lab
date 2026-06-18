@@ -11,7 +11,7 @@ Vorhanden im Repository:
 - Erste Port-Artefakte fuer Blueprints, Demo-Entities, Scorecards und Actions als Migrationsreferenz aus dem initialen Experiment.
 - Backstage-Zielstruktur unter `backstage/` fuer Catalog-Locations, Beispielkonfiguration, Templates und Scorecard-Mapping.
 - Backstage-native Demo-Entities fuer Teams, Systeme und Services.
-- Zwei Demo-Services: `customer-portal` als weitgehend vollstaendiges Beispiel und `reporting-api` mit bewusst fehlendem Runbook-Link.
+- Katalog-Services: `customer-portal` als weitgehend vollstaendiges Beispiel, `mycrefo` als reale Repository-Anbindung und `reporting-api` mit bewusst fehlendem Runbook-Link.
 - GitHub-Issue-Forms fuer Katalogpflege und IKS-Reviews.
 - Aktive GitHub-Actions-Validierung fuer YAML-Dateien in `backstage`, `port`, `examples`, `agents` und `.github/ISSUE_TEMPLATE`.
 - Advisory Catalog Quality und IKS Checks mit lokalem/CI Markdown-Report unter `backstage/scorecards/`.

@@ -1,3 +1,4 @@
+# Backstage catalog entities (not Kubernetes)
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:

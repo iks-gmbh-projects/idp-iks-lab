@@ -2,29 +2,25 @@
 apiVersion: backstage.io/v1beta1
 kind: Component
 metadata:
-  name: customer-portal
-  title: Customer Portal
-  description: Demo service for a customer-facing web portal.
+  name: mycrefo
+  title: MyCrefo
+  description: A modular system for managing and integrating business applications.
   tags:
     - iks
     - criticality-high
     - data-personal
   annotations:
-    backstage.io/source-location: url:https://github.com/example-org/customer-portal
+    backstage.io/source-location: url:https://github.com/iks-gmbh-projects/mycrefo
     backstage.io/techdocs-ref: dir:./docs
     iks.dev/business-owner: customer-success
     iks.dev/criticality: high
     iks.dev/protection-need: high
     iks.dev/data-class: personal-data
     iks.dev/compliance-scope: iks,gdpr
-    iks.dev/runbook-url: https://github.com/example-org/customer-portal/blob/main/docs/runbook.md
   links:
-    - url: https://github.com/example-org/customer-portal/tree/main/docs
+    - url: https://github.com/iks-gmbh-projects/mycrefo/tree/main/docs
       title: Documentation
       icon: docs
-    - url: https://github.com/example-org/customer-portal/blob/main/docs/runbook.md
-      title: Runbook
-      icon: help
 spec:
   type: service
   lifecycle: experimental

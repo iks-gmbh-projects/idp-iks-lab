@@ -13,8 +13,9 @@ This guide describes the MVP catalog views for issue #20. It assumes a generated
 1. Open Backstage at `http://localhost:3000`.
 2. Open the Software Catalog.
 3. Select kind/type filters for `Component` / `service` if available.
-4. Confirm both demo services are present:
+4. Confirm the catalog services are present:
    - `customer-portal`
+   - `mycrefo`
    - `reporting-api`
 
 ## View: IKS-relevant services
@@ -27,6 +28,7 @@ Default UI path:
 Expected services:
 
 - `customer-portal` (`iks.dev/compliance-scope: iks,gdpr`)
+- `mycrefo` (`iks.dev/compliance-scope: iks,gdpr`)
 - `reporting-api` (`iks.dev/compliance-scope: iks`)
 
 ## View: critical services
@@ -39,6 +41,7 @@ Default UI path:
 Expected services:
 
 - `customer-portal` (`iks.dev/criticality: high`)
+- `mycrefo` (`iks.dev/criticality: high`)
 
 Non-critical comparison service:
 
@@ -79,6 +82,24 @@ Confirm the incomplete metadata demo case:
 | Protection need | `iks.dev/protection-need` | `normal` |
 | Data class | `iks.dev/data-class` | `confidential` |
 | Compliance scope | `iks.dev/compliance-scope` | `iks` |
+
+## Service detail check: mycrefo
+
+Confirm the real repository catalog entry:
+
+| Demo field | Backstage source | Expected value |
+|---|---|---|
+| Technical owner | `spec.owner` | `group:default/platform-team` |
+| Business owner | `metadata.annotations.iks.dev/business-owner` | `customer-success` |
+| System | `spec.system` | `customer-experience` |
+| Repository | `metadata.annotations.backstage.io/source-location` | `url:https://github.com/iks-gmbh-projects/mycrefo` |
+| Lifecycle | `spec.lifecycle` | `experimental` |
+| Documentation | `metadata.links[Documentation]` / `backstage.io/techdocs-ref` | present |
+| Runbook | `iks.dev/runbook-url` / `metadata.links[Runbook]` | not set initially |
+| Criticality | `iks.dev/criticality` | `high` |
+| Protection need | `iks.dev/protection-need` | `high` |
+| Data class | `iks.dev/data-class` | `personal-data` |
+| Compliance scope | `iks.dev/compliance-scope` | `iks,gdpr` |
 
 ## Tag convention
 

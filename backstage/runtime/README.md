@@ -132,6 +132,7 @@ Expected demo entities:
   - `management-reporting`
 - Components:
   - `customer-portal`
+  - `mycrefo`
   - `reporting-api`
 - Templates:
   - `catalog-metadata-fix`
