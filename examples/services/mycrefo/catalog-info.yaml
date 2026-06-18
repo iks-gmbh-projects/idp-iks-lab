@@ -4,13 +4,15 @@ kind: Component
 metadata:
   name: mycrefo
   title: MyCrefo
-  description: A modular system for managing and integrating business applications.
+  description: >-
+    A modular system for managing and integrating business applications.
   tags:
     - iks
     - criticality-high
     - data-personal
   annotations:
-    backstage.io/source-location: url:https://github.com/iks-gmbh-projects/mycrefo
+    backstage.io/source-location: >-
+      url:https://github.com/iks-gmbh-projects/mycrefo
     backstage.io/techdocs-ref: dir:./docs
     iks.dev/business-owner: customer-success
     iks.dev/criticality: high
@@ -24,5 +26,5 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: group:default/platform-team
+  owner: group:default/ecreditreform
   system: customer-experience

@@ -89,7 +89,7 @@ Confirm the real repository catalog entry:
 
 | Demo field | Backstage source | Expected value |
 |---|---|---|
-| Technical owner | `spec.owner` | `group:default/platform-team` |
+| Technical owner | `spec.owner` | `group:default/ecreditreform` |
 | Business owner | `metadata.annotations.iks.dev/business-owner` | `customer-success` |
 | System | `spec.system` | `customer-experience` |
 | Repository | `metadata.annotations.backstage.io/source-location` | `url:https://github.com/iks-gmbh-projects/mycrefo` |

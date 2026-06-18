@@ -126,6 +126,7 @@ Expected demo entities:
 - Groups:
   - `platform-team`
   - `iks-review-board`
+  - `ecreditreform`
   - `customer-success`
 - Systems:
   - `customer-experience`

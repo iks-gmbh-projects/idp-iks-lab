@@ -70,6 +70,7 @@ Current demo groups:
 
 - `platform-team` for technical ownership
 - `iks-review-board` for IKS review workflows
+- `ecreditreform` for the GitHub team that owns `mycrefo`
 - `customer-success` for business ownership
 
 ### System
@@ -131,9 +132,9 @@ Link guidance:
 - A missing runbook is schema-compatible but should appear as a catalog-quality gap.
 
 `customer-portal` is the complete demo service. `mycrefo` is a real repository
-catalog entry with customer-data classification. `reporting-api` intentionally
-omits `iks.dev/runbook-url` and a runbook link to demonstrate advisory quality
-checks.
+catalog entry with customer-data classification and the repository's GitHub team
+as technical owner. `reporting-api` intentionally omits `iks.dev/runbook-url`
+and a runbook link to demonstrate advisory quality checks.
 
 ## Demo view tags
 

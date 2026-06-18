@@ -34,6 +34,21 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
+  name: ecreditreform
+  title: eCreditreform
+  description: >-
+    GitHub team configured for the iks-gmbh-projects/mycrefo repository.
+  annotations:
+    iks.dev/area: Customer Experience
+spec:
+  type: team
+  profile:
+    displayName: eCreditreform
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
   name: customer-success
   title: Customer Success
   description: Business owner group for customer-facing services.

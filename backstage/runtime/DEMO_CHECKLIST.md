@@ -17,7 +17,7 @@ Use this checklist to verify the local Backstage demo path works end-to-end.
 
 ## Catalog Import Verification
 
-- [ ] Software Catalog shows 3 Groups: `platform-team`, `iks-review-board`, `customer-success`
+- [ ] Software Catalog shows 4 Groups: `platform-team`, `iks-review-board`, `ecreditreform`, `customer-success`
 - [ ] Software Catalog shows 2 Systems: `customer-experience`, `management-reporting`
 - [ ] Software Catalog shows 3 Components (services): `customer-portal`, `mycrefo`, `reporting-api`
 - [ ] Software Catalog shows 3 Templates: `catalog-metadata-fix`, `iks-review-request`, `service-onboarding`
@@ -59,7 +59,7 @@ Use this checklist to verify the local Backstage demo path works end-to-end.
 
 ## Service Detail: mycrefo
 
-- [ ] Technical owner: `group:default/platform-team`
+- [ ] Technical owner: `group:default/ecreditreform`
 - [ ] Business owner annotation: `iks.dev/business-owner: customer-success`
 - [ ] System: `customer-experience`
 - [ ] Repository: `backstage.io/source-location` points to `iks-gmbh-projects/mycrefo`
