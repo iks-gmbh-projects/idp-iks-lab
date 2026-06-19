@@ -83,6 +83,7 @@ python3 backstage/scorecards/check_catalog_scorecards.py --assert-demo-fixtures
 - [ ] Generate report: `python3 backstage/scorecards/check_catalog_scorecards.py --output /tmp/report.md`
 - [ ] Report shows `customer-portal`: 11/11 checks PASS
 - [ ] Report shows `reporting-api`: 10/11 checks PASS, 1 FAIL (runbook)
+- [ ] Report shows `mycrefo`: 10/11 checks PASS, 1 FAIL (runbook, intentionally deferred)
 
 CI verification:
 - [ ] GitHub Actions workflow runs scorecard report on PR/push
