@@ -1,3 +1,4 @@
+# Backstage catalog entities (not Kubernetes)
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
@@ -28,6 +29,21 @@ spec:
   profile:
     displayName: IKS Review Board
     email: iks-review@example.com
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: ecreditreform
+  title: eCreditreform
+  description: >-
+    GitHub team configured for the iks-gmbh-projects/mycrefo repository.
+  annotations:
+    iks.dev/area: Customer Experience
+spec:
+  type: team
+  profile:
+    displayName: eCreditreform
   children: []
 ---
 apiVersion: backstage.io/v1alpha1

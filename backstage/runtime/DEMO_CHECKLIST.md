@@ -17,17 +17,17 @@ Use this checklist to verify the local Backstage demo path works end-to-end.
 
 ## Catalog Import Verification
 
-- [ ] Software Catalog shows 3 Groups: `platform-team`, `iks-review-board`, `customer-success`
+- [ ] Software Catalog shows 4 Groups: `platform-team`, `iks-review-board`, `ecreditreform`, `customer-success`
 - [ ] Software Catalog shows 2 Systems: `customer-experience`, `management-reporting`
-- [ ] Software Catalog shows 2 Components (services): `customer-portal`, `reporting-api`
+- [ ] Software Catalog shows 3 Components (services): `customer-portal`, `mycrefo`, `reporting-api`
 - [ ] Software Catalog shows 3 Templates: `catalog-metadata-fix`, `iks-review-request`, `service-onboarding`
 - [ ] No generated Backstage sample entities are mixed in
 
 ## Catalog Views (backstage/catalog/demo-views.md)
 
-- [ ] All services view shows both `customer-portal` and `reporting-api`
+- [ ] All services view shows `customer-portal`, `mycrefo`, and `reporting-api`
 - [ ] IKS-relevant services: filter by tag `iks` or inspect `iks.dev/compliance-scope` annotation
-- [ ] Critical services: filter by tag `criticality-high` shows `customer-portal` only
+- [ ] Critical services: filter by tag `criticality-high` shows `customer-portal` and `mycrefo`
 
 ## Service Detail: customer-portal
 
@@ -57,6 +57,20 @@ Use this checklist to verify the local Backstage demo path works end-to-end.
 - [ ] Data class: `iks.dev/data-class: confidential`
 - [ ] Compliance scope: `iks.dev/compliance-scope: iks`
 
+## Service Detail: mycrefo
+
+- [ ] Technical owner: `group:default/ecreditreform`
+- [ ] Business owner annotation: `iks.dev/business-owner: customer-success`
+- [ ] System: `customer-experience`
+- [ ] Repository: `backstage.io/source-location` points to `iks-gmbh-projects/mycrefo`
+- [ ] Lifecycle: `experimental`
+- [ ] Documentation link or `backstage.io/techdocs-ref` present
+- [ ] Runbook annotation intentionally not set until a concrete runbook exists
+- [ ] Criticality: `iks.dev/criticality: high`
+- [ ] Protection need: `iks.dev/protection-need: high`
+- [ ] Data class: `iks.dev/data-class: personal-data`
+- [ ] Compliance scope: `iks.dev/compliance-scope: iks,gdpr`
+
 ## Advisory Scorecard Checks (backstage/scorecards/)
 
 Local test:
@@ -69,6 +83,7 @@ python3 backstage/scorecards/check_catalog_scorecards.py --assert-demo-fixtures
 - [ ] Generate report: `python3 backstage/scorecards/check_catalog_scorecards.py --output /tmp/report.md`
 - [ ] Report shows `customer-portal`: 11/11 checks PASS
 - [ ] Report shows `reporting-api`: 10/11 checks PASS, 1 FAIL (runbook)
+- [ ] Report shows `mycrefo`: 10/11 checks PASS, 1 FAIL (runbook, intentionally deferred)
 
 CI verification:
 - [ ] GitHub Actions workflow runs scorecard report on PR/push

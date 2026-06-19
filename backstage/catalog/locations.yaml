@@ -1,3 +1,4 @@
+# Backstage catalog entity (not Kubernetes)
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
@@ -11,4 +12,5 @@ spec:
     - ../templates/iks-review-request/template.yaml
     - ../templates/service-onboarding/template.yaml
     - ../../examples/services/customer-portal/catalog-info.yaml
+    - ../../examples/services/mycrefo/catalog-info.yaml
     - ../../examples/services/reporting-api/catalog-info.yaml

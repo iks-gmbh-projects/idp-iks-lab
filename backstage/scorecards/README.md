@@ -64,6 +64,7 @@ python3 backstage/scorecards/check_catalog_scorecards.py --assert-demo-fixtures
 
 - **`customer-portal`**: Passes all 11 checks (complete reference service)
 - **`reporting-api`**: Fails only `catalog-quality/has-runbook` intentionally to demonstrate catalog quality gaps
+- **`mycrefo`**: Fails only `catalog-quality/has-runbook`; the runbook is intentionally deferred until a concrete one exists
 
 ## Interpreting Results
 

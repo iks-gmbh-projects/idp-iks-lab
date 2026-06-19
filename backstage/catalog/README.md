@@ -7,6 +7,7 @@ This directory defines the catalog shape for the IKS IDP MVP. Backstage is the t
 GitHub is the versioned source of truth for catalog descriptors. For service `Component` entities, the authoritative files are service-local:
 
 - `examples/services/customer-portal/catalog-info.yaml`
+- `examples/services/mycrefo/catalog-info.yaml`
 - `examples/services/reporting-api/catalog-info.yaml`
 
 `backstage/catalog/components.yaml` is retained only as a migration/reference copy while the repo moves away from the original Port experiment. Do not import it through `locations.yaml` while the service-local `catalog-info.yaml` files are imported, because that would create duplicate `Component` entity refs.
@@ -69,6 +70,7 @@ Current demo groups:
 
 - `platform-team` for technical ownership
 - `iks-review-board` for IKS review workflows
+- `ecreditreform` for the GitHub team that owns `mycrefo`
 - `customer-success` for business ownership
 
 ### System
@@ -129,7 +131,10 @@ Link guidance:
 - Add a runbook link when `iks.dev/runbook-url` exists.
 - A missing runbook is schema-compatible but should appear as a catalog-quality gap.
 
-`customer-portal` is the complete demo service. `reporting-api` intentionally omits `iks.dev/runbook-url` and a runbook link to demonstrate advisory quality checks.
+`customer-portal` is the complete demo service. `mycrefo` is a real repository
+catalog entry with customer-data classification and the repository's GitHub team
+as technical owner. `reporting-api` intentionally omits `iks.dev/runbook-url`
+and a runbook link to demonstrate advisory quality checks.
 
 ## Demo view tags
 

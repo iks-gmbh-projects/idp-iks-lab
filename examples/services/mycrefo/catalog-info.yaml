@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: mycrefo
+  title: MyCrefo
+  description: >-
+    A modular system for managing and integrating business applications.
+  tags:
+    - iks
+    - criticality-high
+    - data-personal
+  annotations:
+    backstage.io/source-location: >-
+      url:https://github.com/iks-gmbh-projects/mycrefo
+    backstage.io/techdocs-ref: dir:./docs
+    iks.dev/business-owner: customer-success
+    iks.dev/criticality: high
+    iks.dev/protection-need: high
+    iks.dev/data-class: personal-data
+    iks.dev/compliance-scope: iks,gdpr
+  links:
+    - url: https://github.com/iks-gmbh-projects/mycrefo/tree/main/docs
+      title: Documentation
+      icon: docs
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:default/ecreditreform
+  system: customer-experience
