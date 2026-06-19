@@ -110,9 +110,17 @@ Residual risks for stakeholders:
 
 ## Definition of Done
 
-- **Demo can be completed without changing production systems** — validation and
-  dry-run operate only on versioned repository artifacts; no production calls.
-- **Remaining risks documented** — see above.
-- **MVP scope unchanged** — still excludes Kubernetes, runtime health,
+Status: met for the static validation scope. The live end-to-end demo walkthrough
+is the one remaining item and is intentionally a documented fallback (see AC3 and
+Known limitations), not a closed validation gate.
+
+- **No production systems changed** — ✅ validation and dry-run operate only on
+  versioned repository artifacts; no production calls.
+- **End-to-end demo walkthrough** — ⏳ not executed in this pass. The catalog UI /
+  TechDocs path still requires a one-off live run via
+  `backstage/runtime/DEMO_CHECKLIST.md`; until then it remains a documented
+  fallback / remaining risk rather than a verified, closed gate.
+- **Remaining risks documented** — ✅ see above.
+- **MVP scope unchanged** — ✅ still excludes Kubernetes, runtime health,
   provisioning, and autonomous compliance enforcement (consistent with
   `wiki/docs/demo-story.md` MVP-Abgrenzung).
