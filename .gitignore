@@ -12,6 +12,7 @@ Thumbs.db
 .agents/
 .codex/
 .ai/
+.claude/
 
 # Dependency and build output
 node_modules/
